@@ -31,7 +31,9 @@ class App extends Component {
     );
   }
   componentWillMount() {
-    fetch("http://localhost:3000/data.json")
+    fetch(
+      "https://raw.githubusercontent.com/ayildirim/bio2/master/public/data.json"
+    )
       .then(response => response.json())
       .then(responseJson => {
         this.setState({ projects: responseJson.projects });
