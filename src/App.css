@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h4,
+p,
+#about,
+li {
+  font-family: sans;
+}
+.endis {
+  margin: 5px;
+  padding: 0;
+  border: 1px solid black;
+  border-bottom: 5px solid black;
+  width: 180px;
+  float: left;
+  position: relative;
+}
+.endislink {
+  cursor: pointer;
+  display: block;
+}
+.resim {
+  background-image: url("https://raw.githubusercontent.com/ayildirim/bio/master/images/gapz.jpg");
+  width: 180px;
+  height: 175px;
+  background-size: 180px 175px;
+}
+.caption {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  float: left;
+  width: 180px;
+  background-color: gray;
+  color: white;
+  opacity: 0.8;
+  border-top: 1px solid black;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+.caption div {
+  padding: 5px;
+}
+a.caption:hover {
+  background-color: white;
+  color: black;
+}
+a.caption span {
+  font-size: 12px;
+}
+a.caption img {
+  width: auto;
+  height: 35px;
+  float: right;
+}
+.littlebox {
+  border: 1px solid black;
+  border-bottom: 5px solid black;
+}
+.littleboxic {
+  padding: 3px;
+}
+.timeline {
+  color: #333;
+  border: 0px solid red;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  text-shadow: 0px 0px 1px #333;
+  border-left: 1px solid black;
+}

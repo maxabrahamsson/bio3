@@ -1,0 +1,198 @@
+{
+  "projects": [
+    {
+      "title": "Electric Skateboard",
+      "subtext": "RF/BT Remote, Android App, Standalone RF Remote",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/ahmetseboard.jpg",
+      "linkTo": "https://www.youtube.com/watch?v=Ym-OL_tGFy0"
+    },
+    {
+      "title": "Android Full VR",
+      "subtext": "Native SurfaceFlinger patch",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/sbs.jpg",
+      "linkTo":
+        "https://play.google.com/store/apps/details?id=com.mclightning.autosbs"
+    },
+    {
+      "title": "OpenVR",
+      "subtext": "",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/openvr.jpg",
+      "linkTo": "https://mclightning.com/openvr"
+    },
+    {
+      "title": "Livestream with SmartEyeglass",
+      "subtext": "Android, AR, SmartEyeglass",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/seglivestream.jpg",
+      "linkTo":
+        "https://developer.sony.com/2016/01/28/livestreaming-app-for-smarteyeglass-available-as-open-source-project/"
+    },
+    {
+      "title": "OpenGL on SmartEyeglass",
+      "subtext": "Android, AR, SmartEyeglass",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/seg3d.jpg",
+      "linkTo":
+        "https://developer.sony.com/2014/12/11/learn-how-to-display-3d-graphics-on-smarteyeglass/"
+    },
+    {
+      "title": "Buck Buck : Johnny on a pony!",
+      "subtext": "Web, Android",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/buckbuck.jpg",
+      "linkTo":
+        "https://play.google.com/store/apps/details?id=com.bolt.buckbuck"
+    },
+    {
+      "title": "GearTornado",
+      "subtext": "PC, Web, Android",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/geartornado.jpg",
+      "linkTo":
+        "https://web.archive.org/web/20170103154751/http://geartornado.com/"
+    },
+    {
+      "title": "XBMC Remote For Sony",
+      "subtext": "Android",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/xbmc.jpg",
+      "linkTo":
+        "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.xbmcsw"
+    },
+    {
+      "title": "PeekScreen for Sony SmartWatches",
+      "subtext": "Android",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/peek2.jpg",
+      "linkTo":
+        "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.peekscreen"
+    },
+    {
+      "title": "PeekScreen for Sony LiveView",
+      "subtext": "Android",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/liveview.jpg",
+      "linkTo":
+        "https://play.google.com/store/apps/details?id=com.sonyericsson.extras.liveview.plugins.peekscreen"
+    },
+    {
+      "title": "Diabetia",
+      "subtext": "Web, iOS",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/diabetia.jpg",
+      "linkTo": ""
+    },
+    {
+      "title": "The Most Awesome Game",
+      "subtext": "Kinect Ad Stand",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/doguscay.jpg",
+      "linkTo": ""
+    },
+    {
+      "title": "Jewel Hunting",
+      "subtext": "Kinect Ad Stand",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/molped.jpg",
+      "linkTo": ""
+    },
+    {
+      "title": "The Risk Hunters",
+      "subtext": "Kinect Ad Stand",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/adstand.jpg",
+      "linkTo": "http://www.youtube.com/watch?v=CORwDsC60as"
+    },
+    {
+      "title": "Pattison Institute",
+      "subtext": "CMS, CRM, PHP",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/pattison.jpg",
+      "linkTo": "http://pattisoninstitute.com/"
+    },
+    {
+      "title": "LunarCannon",
+      "subtext": "Android & Tizen Port",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/lunar2.jpg",
+      "linkTo": "http://www.mclightning.com/lunar"
+    },
+    {
+      "title": "GlassLayer",
+      "subtext": "PHP, JS, CRM",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/gapz.jpg",
+      "linkTo": "http://www.glasslayer.com"
+    },
+    {
+      "title": "OBWIOUS",
+      "subtext": "Bluetooth Watch",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/watch.jpg",
+      "linkTo":
+        "http://mclightning.com/innowatch-opensource-bluetooth-watch-initiative/announcements/"
+    },
+    {
+      "title": "LunarCannon",
+      "subtext": "HTML5 Canvas Game",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/ufoga.jpg",
+      "linkTo": "http://mclightning.com/lunar"
+    },
+    {
+      "title": "Elektropan",
+      "subtext": "Customer Data Monitoring Panel",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/emetre.jpg",
+      "linkTo":
+        "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
+    },
+    {
+      "title": "Elektropan",
+      "subtext": "CMS & Portal",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/elektropan.jpg",
+      "linkTo":
+        "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
+    },
+    {
+      "title": "Elektropan",
+      "subtext": "Multi-Threaded TCPIP Server with .NET",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/epan.jpg",
+      "linkTo":
+        "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
+    },
+    {
+      "title": "Sakarya University SBE",
+      "subtext": "CMS & Portal",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/sbet.jpg",
+      "linkTo": "http://www.sbe.sakarya.edu.tr"
+    },
+    {
+      "title": "Quadrotor Initiative",
+      "subtext": "",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/saucopter.jpg",
+      "linkTo": "http://mclightning.com/quadrotor-long-story-short/3dsmax"
+    },
+    {
+      "title": "nGun",
+      "subtext": "Symbian S60v3",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/ngun.jpg",
+      "linkTo": "http://mclightning.com/ngun"
+    },
+    {
+      "title": "AlertMe",
+      "subtext": "Symbian S60v3",
+      "image":
+        "https://raw.githubusercontent.com/ayildirim/bio/master/images/alertme.jpg",
+      "linkTo": "http://mclightning.com/alertme"
+    }
+  ]
+}
