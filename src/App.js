@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import fetch from "isomorphic-fetch";
+
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -17,54 +19,64 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
           {this.state.projects.map((project, i) => {
             return this.renderProject(
               project.image,
               project.title,
               project.subtext,
-              project.linkTo
+              project.linkTo,
+              i
             );
           })}
-        </p>
+        </div>
       </div>
     );
   }
-  componentWillMount() {
-    fetch(
-      "https://raw.githubusercontent.com/ayildirim/bio2/master/public/data.json"
-    )
+  componentDidMount() {
+    this.initialize();
+  }
+
+  initialize = async () => {
+    await fetch("http://localhost:3000/data.json")
       .then(response => response.json())
       .then(responseJson => {
+        alert(responseJson);
         this.setState({ projects: responseJson.projects });
       })
       .catch(error => {
         console.error(error);
       });
-  }
+  };
 
-  renderProject(url: string, title: string, subtext: string, linkTo: string) {
+  renderProject(
+    url: string,
+    title: string,
+    subtext: string,
+    linkTo: string,
+    key: number
+  ) {
     return (
-      <span>
-        <a href="#" class="endislink">
-          <div class="endis">
+      <div key={key}>
+        <a href={linkTo} className="endislink">
+          <div className="endis">
             <div
-              class="resim"
+              className="resim"
               style={{
                 backgroundImage: `url(
                   ${url})`
               }}
             >
-              <a class="caption" href={linkTo}>
+              <div className="caption">
                 <div>
                   {title}
                   {subtext && <span>({subtext})</span>}
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </a>
-      </span>
+      </div>
     );
   }
 }

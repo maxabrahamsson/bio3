@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint-plugin-flowtype": "^2.50.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5"
@@ -16,8 +17,32 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
-    "flow": "flow"
+    "lint": "eslint src",
+    "flow": "flow",
+    "pretty": "prettier --write --tab-width 2 \"src/**/*.js\"",
+    "precommit": "lint-staged"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "text"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run pretty",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -29,6 +54,8 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.79.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
     "prettier": "^1.14.2"
   }
 }
