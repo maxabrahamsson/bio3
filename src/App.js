@@ -39,7 +39,7 @@ class App extends Component {
 
   initialize = async () => {
     await fetch(
-      "https://raw.githubusercontent.com/ayildirim/bio2/develop/public/data.json"
+      "https://raw.githubusercontent.com/ayildirim/bio2/gh-pages/data.json"
     )
       .then(response => response.json())
       .then(responseJson => {
