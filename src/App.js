@@ -38,7 +38,9 @@ class App extends Component {
   }
 
   initialize = async () => {
-    await fetch("http://localhost:3000/data.json")
+    await fetch(
+      "https://raw.githubusercontent.com/ayildirim/bio2/develop/public/data.json"
+    )
       .then(response => response.json())
       .then(responseJson => {
         this.setState({ projects: responseJson.projects });
