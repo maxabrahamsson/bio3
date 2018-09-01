@@ -4,11 +4,18 @@ import fetch from "isomorphic-fetch";
 import logo from "./logo.svg";
 import "./App.css";
 
+type TextItem = {
+  text: string,
+  linkTo: string
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: [{}]
+      projects: [{}],
+      experiments: [{}],
+      publicity: [{}]
     };
   }
 
@@ -16,7 +23,11 @@ class App extends Component {
     return (
       <div className="App">
         <div style={{ width: "100%", float: "left" }}>
-          <h2 id="works">Finished Projects and Works</h2>
+          <h2>Publicity</h2>
+          {this.renderList(this.state.publicity)}
+        </div>
+        <div style={{ width: "100%", float: "left" }}>
+          <h2 id="works">Finished Projects & Works</h2>
           <div style={{ width: "100%", float: "left" }} align="left">
             Due to privacy policies of some of my clients, I can not publicly
             share direct demos of some projects. Please contact for further
@@ -28,6 +39,20 @@ class App extends Component {
           </div>
           <div className="App-intro">
             {this.state.projects.map((project, i) => {
+              return this.renderProject(
+                project.image,
+                project.title,
+                project.subtext,
+                project.linkTo,
+                i
+              );
+            })}
+          </div>
+        </div>
+        <div style={{ width: "100%", float: "left" }}>
+          <h2 id="works">Experiments & Concept Projects</h2>
+          <div className="App-intro">
+            {this.state.experiments.map((project, i) => {
               return this.renderProject(
                 project.image,
                 project.title,
@@ -51,7 +76,11 @@ class App extends Component {
     )
       .then(response => response.json())
       .then(responseJson => {
-        this.setState({ projects: responseJson.projects });
+        this.setState({
+          projects: responseJson.projects,
+          experiments: responseJson.experiments,
+          publicity: responseJson.publicity
+        });
       })
       .catch(error => {
         console.error(error);
@@ -78,14 +107,31 @@ class App extends Component {
             >
               <div className="caption">
                 <div>
-                  {title}
-                  {subtext && <span>({subtext})</span>}
+                  {title}{" "}
+                  {subtext && <span className="subtext">({subtext})</span>}
                 </div>
               </div>
             </div>
           </div>
         </a>
       </div>
+    );
+  }
+
+  renderList(list: Array<TextItem>) {
+    return (
+      <ul>
+        {list.map((item, i) => {
+          return this.renderTextListItem(item.text, item.linkTo, i);
+        })}
+      </ul>
+    );
+  }
+  renderTextListItem(text: string, linkTo: string, key: number) {
+    return (
+      <li key={key}>
+        {linkTo ? <a href={linkTo}>{text}</a> : <span>{text}</span>}
+      </li>
     );
   }
 }

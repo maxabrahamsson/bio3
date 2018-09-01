@@ -55,7 +55,7 @@ a.caption:hover {
   background-color: white;
   color: black;
 }
-a.caption span {
+.subtext {
   font-size: 12px;
 }
 a.caption img {
