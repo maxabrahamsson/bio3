@@ -41,7 +41,6 @@ class App extends Component {
     await fetch("http://localhost:3000/data.json")
       .then(response => response.json())
       .then(responseJson => {
-        alert(responseJson);
         this.setState({ projects: responseJson.projects });
       })
       .catch(error => {
