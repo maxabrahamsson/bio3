@@ -15,20 +15,28 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <div className="App-intro">
-          {this.state.projects.map((project, i) => {
-            return this.renderProject(
-              project.image,
-              project.title,
-              project.subtext,
-              project.linkTo,
-              i
-            );
-          })}
+        <div style={{ width: "100%", float: "left" }}>
+          <h2 id="works">Finished Projects and Works</h2>
+          <div style={{ width: "100%", float: "left" }} align="left">
+            Due to privacy policies of some of my clients, I can not publicly
+            share direct demos of some projects. Please contact for further
+            information.
+            <p>
+              This section of the portfolio was last updated on 2017 March.
+              Please visit my LinkedIn profile for more up-to-date portfolio.
+            </p>
+          </div>
+          <div className="App-intro">
+            {this.state.projects.map((project, i) => {
+              return this.renderProject(
+                project.image,
+                project.title,
+                project.subtext,
+                project.linkTo,
+                i
+              );
+            })}
+          </div>
         </div>
       </div>
     );
