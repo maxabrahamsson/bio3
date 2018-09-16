@@ -1,4 +1,64 @@
 {
+  "profiles": [
+    {
+      "text": "Twitter",
+      "linkTo": "http://www.twitter.com/mclightning"
+    },
+    {
+      "text": "LinkedIn",
+      "linkTo": "http://www.linkedin.com/in/ahmetyildirim"
+    },
+    {
+      "text": "Github",
+      "linkTo": "https://github.com/ayildirim"
+    }
+  ],
+  "education": [
+    {
+      "text": "Computer Engineering - Sakarya University - 2014",
+      "linkTo": ""
+    },
+    {
+      "text": "Uskudar Anatolian Highschool- 2010",
+      "linkTo": ""
+    }
+  ],
+  "currentOccupation": [
+    {
+      "text": "Software Engineer / Self-Employed",
+      "linkTo": ""
+    }
+  ],
+  "interests": [
+    {
+      "text": "Rapid prototyping / Hardware hacking",
+      "linkTo": ""
+    },
+    {
+      "text": "Science & Cosmology",
+      "linkTo": ""
+    },
+    {
+      "text": "Philosophy",
+      "linkTo": ""
+    },
+    {
+      "text": "Sci-Fi",
+      "linkTo": ""
+    },
+    {
+      "text": "ENTP - Debater",
+      "linkTo": "https://www.16personalities.com/entp-personality"
+    },
+    {
+      "text": "RHETI - Peacemaker",
+      "linkTo": "https://www.enneagraminstitute.com/type-9"
+    },
+    {
+      "text": "RHETI - Achiever",
+      "linkTo": "https://www.enneagraminstitute.com/type-3"
+    }
+  ],
   "publicity": [
     {
       "text": "Sony DeveloperWorld article about Livestreaming App with SmartEyeglass for remote guidance",

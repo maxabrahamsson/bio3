@@ -9,22 +9,34 @@ type TextItem = {
   linkTo: string
 };
 
+let host =
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
+    ? "http://localhost:3000"
+    : "https://raw.githubusercontent.com/ayildirim/bio2/gh-pages";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: [{}],
-      experiments: [{}],
-      publicity: [{}]
+      data: []
     };
   }
 
   render() {
+    if (this.state.data.length == 0) return <div />;
     return (
       <div className="App">
         <div style={{ width: "100%", float: "left" }}>
-          <h2>Publicity</h2>
-          {this.renderList(this.state.publicity)}
+          {this.renderList("Education", this.state.data.education)}
+          {this.renderList("Profiles", this.state.data.profiles)}
+        </div>
+        <div style={{ width: "100%", float: "left" }}>
+          {this.renderList("Publicity", this.state.data.publicity)}
+          {this.renderList(
+            "Interests & Characteristics",
+            this.state.data.interests
+          )}
         </div>
         <div style={{ width: "100%", float: "left" }}>
           <h2 id="works">Finished Projects & Works</h2>
@@ -38,7 +50,7 @@ class App extends Component {
             </p>
           </div>
           <div className="App-intro">
-            {this.state.projects.map((project, i) => {
+            {this.state.data.projects.map((project, i) => {
               return this.renderProject(
                 project.image,
                 project.title,
@@ -52,7 +64,7 @@ class App extends Component {
         <div style={{ width: "100%", float: "left" }}>
           <h2 id="works">Experiments & Concept Projects</h2>
           <div className="App-intro">
-            {this.state.experiments.map((project, i) => {
+            {this.state.data.experiments.map((project, i) => {
               return this.renderProject(
                 project.image,
                 project.title,
@@ -71,15 +83,11 @@ class App extends Component {
   }
 
   initialize = async () => {
-    await fetch(
-      "https://raw.githubusercontent.com/ayildirim/bio2/gh-pages/data.json"
-    )
+    await fetch(host + "/data.json")
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
-          projects: responseJson.projects,
-          experiments: responseJson.experiments,
-          publicity: responseJson.publicity
+          data: responseJson
         });
       })
       .catch(error => {
@@ -118,13 +126,16 @@ class App extends Component {
     );
   }
 
-  renderList(list: Array<TextItem>) {
+  renderList(title: string, list: Array<TextItem>) {
     return (
-      <ul>
-        {list.map((item, i) => {
-          return this.renderTextListItem(item.text, item.linkTo, i);
-        })}
-      </ul>
+      <div style={HalfDiv}>
+        <h2>{title}</h2>
+        <ul>
+          {list.map((item, i) => {
+            return this.renderTextListItem(item.text, item.linkTo, i);
+          })}
+        </ul>
+      </div>
     );
   }
   renderTextListItem(text: string, linkTo: string, key: number) {
@@ -135,5 +146,10 @@ class App extends Component {
     );
   }
 }
+
+const HalfDiv = {
+  width: "50%",
+  float: "left"
+};
 
 export default App;
