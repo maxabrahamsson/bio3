@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
 
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 
 type TextItem = {
   text: string,

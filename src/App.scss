@@ -47,21 +47,21 @@ li {
   border-top: 1px solid black;
   font-family: Tahoma;
   font-size: 16px;
-}
-.caption div {
-  padding: 5px;
-}
-a.caption:hover {
-  background-color: white;
-  color: black;
+  a:hover {
+    background-color: white;
+    color: black;
+  }
+  a img {
+    width: auto;
+    height: 35px;
+    float: right;
+  }
+  div {
+    padding: 5px;
+  }
 }
 .subtext {
   font-size: 12px;
-}
-a.caption img {
-  width: auto;
-  height: 35px;
-  float: right;
 }
 .littlebox {
   border: 1px solid black;
