@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
+import isCircleci from "is-circleci";
 
 import logo from "./logo.svg";
 import "./App.scss";
@@ -11,7 +12,8 @@ type TextItem = {
 
 let host =
   window.location.hostname === "localhost" ||
-  window.location.hostname === "127.0.0.1"
+  window.location.hostname === "127.0.0.1" ||
+  isCircleci === false
     ? "http://localhost:3000"
     : "http://www.ahmet.se";
 
