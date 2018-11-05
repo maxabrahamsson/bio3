@@ -13,7 +13,7 @@ let host =
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1"
     ? "http://localhost:3000"
-    : "https://raw.githubusercontent.com/ayildirim/bio2/gh-pages";
+    : "http://www.ahmet.se";
 
 class App extends Component {
   constructor(props) {
