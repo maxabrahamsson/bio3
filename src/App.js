@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
-import isCircleci from "is-circleci";
 
 import "./App.scss";
 
@@ -8,8 +7,6 @@ type TextItem = {
   text: string,
   linkTo: string
 };
-
-let host = "./";
 
 class App extends Component {
   constructor(props) {
@@ -79,7 +76,7 @@ class App extends Component {
   }
 
   initialize = async () => {
-    await fetch(host + "/data.json")
+    await fetch("data.json")
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
