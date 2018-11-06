@@ -34,9 +34,6 @@ class App extends Component {
         <div style={{ width: "100%", float: "left" }}>
           <h2 id="works">Finished Projects & Works</h2>
           <div style={{ width: "100%", float: "left" }} align="left">
-            Due to privacy policies of some of my clients, I can not publicly
-            share direct demos of some projects. Please contact for further
-            information.
             <p>
               This section of the portfolio was last updated on 2017 March.
               Please visit my LinkedIn profile for more up-to-date portfolio.
