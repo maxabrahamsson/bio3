@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
 
-import logo from "./logo.svg";
 import "./App.scss";
 
 type TextItem = {
@@ -24,7 +23,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.data.length == 0) return <div />;
+    if (this.state.data.length === 0) return <div />;
     return (
       <div className="App">
         <div style={{ width: "100%", float: "left" }}>
