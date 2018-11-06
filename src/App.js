@@ -36,7 +36,7 @@ class App extends Component {
           <div style={{ width: "100%", float: "left" }} align="left">
             <p>
               This section of the portfolio was last updated on 2017 March.
-              Please visit my LinkedIn profile for more up-to-date portfolio!
+              Please visit my LinkedIn profile for more up-to-date portfolio.
             </p>
           </div>
           <div className="App-intro">
