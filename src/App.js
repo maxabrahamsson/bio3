@@ -8,12 +8,6 @@ type TextItem = {
   linkTo: string
 };
 
-let host =
-  window.location.hostname === "localhost" ||
-  window.location.hostname === "127.0.0.1"
-    ? "http://localhost:3000"
-    : "http://www.ahmet.se";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -82,7 +76,7 @@ class App extends Component {
   }
 
   initialize = async () => {
-    await fetch(host + "/data.json")
+    await fetch("data.json")
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
