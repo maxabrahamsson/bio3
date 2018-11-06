@@ -35,6 +35,7 @@ jobs:
               git checkout $TARGET_BRANCH
               git rebase $SOURCE_BRANCH
               yarn install
+              CI=false
               yarn build
               git add -A
               git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
