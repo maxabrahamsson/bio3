@@ -9,12 +9,7 @@ type TextItem = {
   linkTo: string
 };
 
-let host =
-  window.location.hostname === "localhost" ||
-  window.location.hostname === "127.0.0.1" ||
-  isCircleci === false
-    ? "http://localhost:3000"
-    : "http://www.ahmet.se";
+let host = "./";
 
 class App extends Component {
   constructor(props) {
