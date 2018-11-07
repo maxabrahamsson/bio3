@@ -25,7 +25,11 @@
 - Github Webhook informs RunCloud of the push
 - RunCloud pulls the new version of the site, and updates on DigitalOcean
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+### Recommended Tools
+- Use NVM to manage node versions
+- Use NPX to run NPM modules in a temporary installation rather than adding as a dependency, specifically for modules that you use rarely or one time.
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+### Future Goals
+- Export Resume & CV as PDF
+- Take data in from LinkedIn profile
+- Add some basic styling to the page
