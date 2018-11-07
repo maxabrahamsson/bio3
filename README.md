@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/ayildirim/bio2.svg?style=svg)](https://circleci.com/gh/ayildirim/bio2)
+[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/ayildirim/portfolio-page)
 
 ## Tech stack
 - React
