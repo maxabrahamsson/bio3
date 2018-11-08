@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
 import { PDFExport } from "@progress/kendo-react-pdf";
 import moment from "moment";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter, Route, Link } from "react-router-dom";
 
 import "./App.scss";
 
@@ -10,24 +10,6 @@ type TextItem = {
   text: string,
   linkTo: string
 };
-const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
-];
-
-const Index = () => <h2>Home</h2>;
-const About = () => <h2>About</h2>;
-const Users = () => <h2>Users</h2>;
 
 class App extends Component {
   exportPDF = () => {
@@ -42,7 +24,7 @@ class App extends Component {
   render() {
     if (this.state.data.length === 0) return <div />;
     return (
-      <Router>
+      <HashRouter>
         <div>
           <nav>
             <ul>
@@ -58,7 +40,7 @@ class App extends Component {
           <Route path="/" exact component={this.Index} />
           <Route path="/pdf/" component={this.Pdf} />
         </div>
-      </Router>
+      </HashRouter>
     );
   }
   Index = () => this.renderPortfolio();
@@ -93,7 +75,7 @@ class App extends Component {
               <thead>
                 <tr>
                   <th
-                    colspan="3"
+                    colSpan="3"
                     align="center"
                     style={{
                       borderBottomWidth: 2,
@@ -110,22 +92,22 @@ class App extends Component {
                   const start = moment(item.start, "DD.MM.YYYY");
                   const end = moment(item.end, "DD.MM.YYYY");
                   return [
-                    <tr style={{ fontWeight: "bold" }}>
+                    <tr style={{ fontWeight: "bold" }} key={"tr_" + i}>
                       <td align="left">{item.title}</td>
                       <td align="center">{item.name}</td>
                       <td align="right">
                         {start.format("MMM YYYY")} - {end.format("MMM YYYY")}
                       </td>
                     </tr>,
-                    <tr>
-                      <td colspan="3">{item.description}</td>
+                    <tr key={"tr2_" + i}>
+                      <td colSpan="3">{item.description}</td>
                     </tr>
                   ];
                 })}
               </tbody>
               <tfoot>
                 <tr>
-                  <td colspan="2">The table footer</td>
+                  <td colSpan="2">The table footer</td>
                 </tr>
               </tfoot>
             </table>
