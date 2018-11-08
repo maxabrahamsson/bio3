@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
+import { PDFExport } from "@progress/kendo-react-pdf";
+import moment from "moment";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import "./App.scss";
 
@@ -7,23 +10,139 @@ type TextItem = {
   text: string,
   linkTo: string
 };
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+
+const Index = () => <h2>Home</h2>;
+const About = () => <h2>About</h2>;
+const Users = () => <h2>Users</h2>;
 
 class App extends Component {
+  exportPDF = () => {
+    this.resume.save();
+  };
   constructor(props) {
     super(props);
     this.state = {
       data: []
     };
   }
-
   render() {
     if (this.state.data.length === 0) return <div />;
+    return (
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/pdf/">Traditional Resume</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <Route path="/" exact component={this.Index} />
+          <Route path="/pdf/" component={this.Pdf} />
+        </div>
+      </Router>
+    );
+  }
+  Index = () => this.renderPortfolio();
+  Pdf = () => this.renderPDFView();
+
+  renderPDFView() {
+    return (
+      <div>
+        <button onClick={this.exportPDF}>Download PDF</button>
+        <PDFExport
+          paperSize={"Letter"}
+          fileName="_____.pdf"
+          title=""
+          subject=""
+          keywords=""
+          ref={r => (this.resume = r)}
+        >
+          <div
+            style={{
+              height: 792,
+              width: 612,
+              padding: "none",
+              backgroundColor: "white",
+              boxShadow: "5px 5px 5px black",
+              margin: "auto",
+              overflowX: "hidden",
+              overflowY: "hidden",
+              fontSize: 11
+            }}
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th
+                    colspan="3"
+                    align="center"
+                    style={{
+                      borderBottomWidth: 2,
+                      borderBottomColor: "black",
+                      borderBottomStyle: "solid"
+                    }}
+                  >
+                    Employment
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.data.companies.map((item, i) => {
+                  const start = moment(item.start, "DD.MM.YYYY");
+                  const end = moment(item.end, "DD.MM.YYYY");
+                  return [
+                    <tr style={{ fontWeight: "bold" }}>
+                      <td align="left">{item.title}</td>
+                      <td align="center">{item.name}</td>
+                      <td align="right">
+                        {start.format("MMM YYYY")} - {end.format("MMM YYYY")}
+                      </td>
+                    </tr>,
+                    <tr>
+                      <td colspan="3">{item.description}</td>
+                    </tr>
+                  ];
+                })}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">The table footer</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </PDFExport>
+      </div>
+    );
+  }
+
+  renderPortfolio() {
     return (
       <div className="App">
         <div style={{ width: "100%", float: "left" }}>
           {this.renderList("Education", this.state.data.education)}
           {this.renderList("Profiles", this.state.data.profiles)}
         </div>
+
         <div style={{ width: "100%", float: "left" }}>
           {this.renderList("Publicity", this.state.data.publicity)}
           {this.renderList(

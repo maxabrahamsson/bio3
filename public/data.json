@@ -1,4 +1,62 @@
 {
+  "companies": [
+    {
+      "slug": "theimaginationfactory",
+      "name": "The Imagination Factory",
+      "title": "Software Engineer",
+      "start": "01.07.2017",
+      "end": "15.07.2018",
+      "description": "I helped ImaginationFactory on software and electronics development of SwimAR product, as well as other prototype AR projects.\nWe used LMX-001 augmented reality display, with a portable embedded linux environment, and sensors to analyze swimming motion and display to swimmers.\nMy personal responsibilities in this project were;\nDevelopment of the embedded linux system that can drive the Sony’s AR display through GPIO pins in DPI standard.\nDevelopment of the sensor (gyro, accelerometer, compass) system and software that can track swimming motion.Development of the Python based application that analyze swimming performance and display in real-time."
+    },
+    {
+      "slug": "above",
+      "name": "Above Agency AB",
+      "title": "Software Engineer",
+      "start": "01.05.2017",
+      "end": "15.06.2018",
+      "description": "● Software development and ideation in Augmented and Virtual reality areas with experience in this area.● Development of computer vision solutions using OpenCV and various frameworks to assist AR products. ● Development of 3D graphics and animations with past experience in game development with Unity3D. ● Development of cross-platform applications using ReactJS and React Native for iOS and Android. ● Involvement in product ideation, hardware rapid prototyping and generic solution development. ● Facilitating educational workshops for betterment of team collaboration towards innovative goals. ● Technical feasibility studies on challenging, groundbreaking concepts. ● Working with a stack of modern technologies for code quality; Node, NPM, Flow, JS Lint, Github/Git flow, Prettier, Swagger, Open API."
+    },
+    {
+      "slug": "sony",
+      "name": "Sony Mobile Communications AB",
+      "title": "Developer Relations Engineer",
+      "start": "15.06.2014",
+      "end": "01.05.2017",
+      "description": "● Partner and solution engineering for SmartEyeglass, LMX-001 and Enterprise SDK activities. ● Technical pre-sales support for augmented reality solutions with SmartEyeglass in various verticals. ● Assessment of APIs to secure use-cases and business opportunities. ● Publish APIs to developer community through developer portal. ● Assist technical writer with API documentation. ● Developer support and engagement through community forums. ● Deployment and development operations of SmartEyeglass and Enterprise SDKs. ● Development of Android code samples."
+    },
+    {
+      "slug": "sakarya",
+      "name": "Sakarya University",
+      "title": "R&D Engineer",
+      "start": "01.08.2013",
+      "end": "01.05.2014",
+      "description": "Design & Development of an Agricultural Drone capable of autonomous flight and spraying farms with payload up to 3kgs. This was my final thesis project at Sakarya University. I wrote a thesis on quadcopter control dynamics and advantages and disadvantages of different multicopter designs. Project was later combined with a research project within our department. We received very good funding from the University. We managed to build 2 hexacopters capable of carrying payload of 1-1,5 kgs. I also developed 1 quadcopter that is capable of carrying 0.5kgs. Hexacopters used Naza flight control system which provided very stable flight controls and allowed us to better focus on use case development of vehicle. Quadcopter used an opensource flight controller, Ardupilot. It was harder to setup but allowed me to experiment with its dynamics at a lower level and learn more about dynamics of flight controller software."
+    },
+    {
+      "slug": "buzz",
+      "name": "Buzz Interaction",
+      "title": "Software Engineer",
+      "start": "01.10.2012",
+      "end": "01.05.2013",
+      "description": "It has been great fun working at Buzz Medikal. My position there, matched my interests perfectly. I had opportunity work on various projects which I really love to do. I was able to get same joy that I get while working on my personal projects, except this time I had colleagues helping me with graphics design & marketing. So I was able to focus on what I do best; Software Development."
+    },
+    {
+      "slug": "eteration",
+      "name": "Eteration",
+      "title": "Software Engineer",
+      "start": "01.06.2012",
+      "end": "01.08.2012",
+      "description": "Eteration is a company specialized in Java applications. They have clients from varied areas. I developed a Java framework for Microsoft Kinect. I developed a sample application which is an Eclipse Plugin. This Eclipse Plugin allowed developer to control debugger without any touch of a button, only by hand gestures. It is possible to pause debugging process by a simple hand gesture and so on."
+    },
+    {
+      "slug": "elektropan",
+      "name": "ElektroPAN",
+      "title": "Software Engineer",
+      "start": "01.09.2011",
+      "end": "01.12.2011",
+      "description": "Elektropan is a company making industrial monitoring devices (electrical compensation, power consumption e.g.) to help companies manage their current drawal from the central power station. This helps factories avoid getting penalty fee which is very high. These monitoring devices has GSM/GPRS module which enables internet connection. I was the sole software engineer at that time working as a full-stack developer. I developed a server backend to listen and log incoming data from these devices. It was a Multi-threaded TCPIP server using C# and .NET. It was capable of handling clients up to 1000 in actual tests. I developed a web panel to allow customers to login and see their monitored data through time. I developed a real-time sms alert system. This system uses a proprietary GSM modem which allowed me to send sms alerts through serial connection directly to the server machine. Customers were able to receive real-time alert messages in cases of high power/current drawal."
+    }
+  ],
   "profiles": [
     {
       "text": "Twitter",
@@ -205,12 +263,14 @@
       "linkTo": "https://mclightning.com/openvr"
     },
     {
+      "company": "sony",
       "title": "Livestream with SmartEyeglass",
       "subtext": "Android, AR, SmartEyeglass",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/seglivestream.jpg",
       "linkTo": "https://developer.sony.com/2016/01/28/livestreaming-app-for-smarteyeglass-available-as-open-source-project/"
     },
     {
+      "company": "sony",
       "title": "OpenGL on SmartEyeglass",
       "subtext": "Android, AR, SmartEyeglass",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/seg3d.jpg",
@@ -247,24 +307,28 @@
       "linkTo": "https://play.google.com/store/apps/details?id=com.sonyericsson.extras.liveview.plugins.peekscreen"
     },
     {
+      "company": "buzz",
       "title": "Diabetia",
       "subtext": "Web, iOS",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/diabetia.jpg",
       "linkTo": ""
     },
     {
+      "company": "buzz",
       "title": "The Most Awesome Game",
       "subtext": "Kinect Ad Stand",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/doguscay.jpg",
       "linkTo": ""
     },
     {
+      "company": "buzz",
       "title": "Jewel Hunting",
       "subtext": "Kinect Ad Stand",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/molped.jpg",
       "linkTo": ""
     },
     {
+      "company": "buzz",
       "title": "The Risk Hunters",
       "subtext": "Kinect Ad Stand",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/adstand.jpg",
@@ -301,30 +365,35 @@
       "linkTo": "http://mclightning.com/lunar"
     },
     {
+      "company": "elektropan",
       "title": "Elektropan",
       "subtext": "Customer Data Monitoring Panel",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/emetre.jpg",
       "linkTo": "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
     },
     {
+      "company": "elektropan",
       "title": "Elektropan",
       "subtext": "CMS & Portal",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/elektropan.jpg",
       "linkTo": "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
     },
     {
+      "company": "elektropan",
       "title": "Elektropan",
       "subtext": "Multi-Threaded TCPIP Server with .NET",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/epan.jpg",
       "linkTo": "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
     },
     {
+      "company": "sakarya",
       "title": "Sakarya University SBE",
       "subtext": "CMS & Portal",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/sbet.jpg",
       "linkTo": "http://www.sbe.sakarya.edu.tr"
     },
     {
+      "company": "sakarya",
       "title": "Quadrotor Initiative",
       "subtext": "",
       "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/saucopter.jpg",
