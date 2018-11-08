@@ -48,7 +48,7 @@ class App extends Component {
 
   renderPDFView() {
     return (
-      <div>
+      <div style={{ align: "center", width: "%100" }}>
         <button onClick={this.exportPDF}>Download PDF</button>
         <PDFExport
           paperSize={"Letter"}
@@ -68,11 +68,17 @@ class App extends Component {
               margin: "auto",
               overflowX: "hidden",
               overflowY: "hidden",
-              fontSize: 11
+              fontSize: 11,
+              fontFamily: "Calibri"
             }}
           >
             <table>
               <thead>
+                <tr>
+                  <th colSpan="3" align="center" style={{ fontSize: 18 }}>
+                    Ahmet Yildirim
+                  </th>
+                </tr>
                 <tr>
                   <th
                     colSpan="3"
@@ -105,11 +111,6 @@ class App extends Component {
                   ];
                 })}
               </tbody>
-              <tfoot>
-                <tr>
-                  <td colSpan="2">The table footer</td>
-                </tr>
-              </tfoot>
             </table>
           </div>
         </PDFExport>
