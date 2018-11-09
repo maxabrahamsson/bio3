@@ -11,6 +11,7 @@ import ReactDOM from "react-dom";
 
 import "./App.scss";
 import DropdownMenu from "./components/DropdownMenu";
+import Profiles from "./components/Profiles";
 
 type TextItem = {
   text: string,
@@ -123,7 +124,9 @@ class App extends Component {
       <div className="App">
         <div style={{ width: "100%", float: "left" }}>
           {this.renderList("Education", this.state.data.education)}
-          {this.renderList("Profiles", this.state.data.profiles)}
+          <div style={HalfDiv}>
+            <Profiles profiles={this.state.data.profiles} />
+          </div>
         </div>
 
         <div style={{ width: "100%", float: "left" }}>
