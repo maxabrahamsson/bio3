@@ -60,15 +60,29 @@
   "profiles": [
     {
       "text": "Twitter",
+      "type": "link",
       "linkTo": "http://www.twitter.com/mclightning"
     },
     {
       "text": "LinkedIn",
+      "type": "link",
       "linkTo": "http://www.linkedin.com/in/ahmetyildirim"
     },
     {
       "text": "Github",
+      "type": "link",
       "linkTo": "https://github.com/ayildirim"
+    },
+    {},
+    {
+      "text": "Phone",
+      "type": "phone",
+      "linkTo": "0725844768"
+    },
+    {
+      "text": "Email",
+      "type": "email",
+      "linkTo": "mailto:mail@ahmet.se"
     }
   ],
   "education": [
