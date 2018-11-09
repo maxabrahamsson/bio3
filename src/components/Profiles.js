@@ -20,23 +20,21 @@ class Profiles extends Component<Props> {
 
   render() {
     return (
-      <div>
-        <List>
-          {this.props.profiles.map((item, i) => {
-            return item.text ? (
-              <ListItem
-                href={item.type === "phone" ? null : item.linkTo}
-                insetChildren={true}
-                primaryText={item.linkTo.split("/").pop()}
-                secondaryText={item.text}
-                leftIcon={iconDefinitions[item.type]}
-              />
-            ) : (
-              <Divider inset={true} />
-            );
-          })}
-        </List>
-      </div>
+      <List>
+        {this.props.profiles.map((item, i) => {
+          return item.text ? (
+            <ListItem
+              href={item.type === "phone" ? null : item.linkTo}
+              insetChildren={true}
+              primaryText={item.linkTo.split("/").pop()}
+              secondaryText={item.text}
+              leftIcon={iconDefinitions[item.type]}
+            />
+          ) : (
+            <Divider inset={true} />
+          );
+        })}
+      </List>
     );
   }
 }

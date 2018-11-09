@@ -6,6 +6,7 @@ import moment from "moment";
 import { HashRouter, Route, Link } from "react-router-dom";
 import RaisedButton from "material-ui/RaisedButton";
 import AppBar from "material-ui/AppBar";
+import Grid from "@material-ui/core/Grid";
 
 import ReactDOM from "react-dom";
 
@@ -121,29 +122,27 @@ class App extends Component {
 
   renderPortfolio() {
     return (
-      <div className="App">
-        <div style={{ width: "100%", float: "left" }}>
-          {this.renderList("Education", this.state.data.education)}
-          <div style={HalfDiv}>
+      <div>
+        <Grid container spacing={24}>
+          <Grid item xs={6}>
+            {this.renderList("Education", this.state.data.education)}
+          </Grid>
+          <Grid item xs={6}>
             <Profiles profiles={this.state.data.profiles} />
-          </div>
-        </div>
+          </Grid>
+          <Grid item xs={6}>
+            {this.renderList("Publicity", this.state.data.publicity)}
+          </Grid>
+          <Grid item xs={6}>
+            {this.renderList(
+              "Interests & Characteristics",
+              this.state.data.interests
+            )}
+          </Grid>
+        </Grid>
 
         <div style={{ width: "100%", float: "left" }}>
-          {this.renderList("Publicity", this.state.data.publicity)}
-          {this.renderList(
-            "Interests & Characteristics",
-            this.state.data.interests
-          )}
-        </div>
-        <div style={{ width: "100%", float: "left" }}>
           <h2 id="works">Finished Projects & Works</h2>
-          <div style={{ width: "100%", float: "left" }} align="left">
-            <p>
-              This section of the portfolio was last updated on 2017 March.
-              Please visit my LinkedIn profile for more up-to-date portfolio.
-            </p>
-          </div>
           <div className="App-intro">
             {this.state.data.projects.map((project, i) => {
               return this.renderProject(
@@ -223,7 +222,7 @@ class App extends Component {
 
   renderList(title: string, list: Array<TextItem>) {
     return (
-      <div style={HalfDiv}>
+      <div>
         <h2>{title}</h2>
         <ul>
           {list.map((item, i) => {
