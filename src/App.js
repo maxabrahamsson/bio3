@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
 import { PDFExport } from "@progress/kendo-react-pdf";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import moment from "moment";
 import { HashRouter, Route, Link } from "react-router-dom";
+import RaisedButton from "material-ui/RaisedButton";
+import AppBar from "material-ui/AppBar";
+
+import ReactDOM from "react-dom";
 
 import "./App.scss";
+import DropdownMenu from "./components/DropdownMenu";
 
 type TextItem = {
   text: string,
@@ -24,23 +30,15 @@ class App extends Component {
   render() {
     if (this.state.data.length === 0) return <div />;
     return (
-      <HashRouter>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Portfolio</Link>
-              </li>
-              <li>
-                <Link to="/pdf/">Traditional Resume</Link>
-              </li>
-            </ul>
-          </nav>
-
-          <Route path="/" exact component={this.Index} />
-          <Route path="/pdf/" component={this.Pdf} />
-        </div>
-      </HashRouter>
+      <MuiThemeProvider>
+        <HashRouter>
+          <div>
+            <AppBar title="Ahmet Yildirim" iconElementLeft={<DropdownMenu />} />
+            <Route path="/" exact component={this.Index} />
+            <Route path="/pdf/" component={this.Pdf} />
+          </div>
+        </HashRouter>
+      </MuiThemeProvider>
     );
   }
   Index = () => this.renderPortfolio();
