@@ -20,6 +20,7 @@
 
 ### Deployment
 - The procedure is configured in /.circleci/config.yml, under deploy step
+- It only triggers when commits are merged into master branch
 - CircleCI builds the static page from the react app
 - Deploys the static page onto "gh-pages" repository
 - Push to "gh-pages" triggers the Github Webhook
@@ -31,6 +32,5 @@
 - Use NPX to run NPM modules in a temporary installation rather than adding as a dependency, specifically for modules that you use rarely or one time.
 
 ### Future Goals
-- Export Resume & CV as PDF
 - Take data in from LinkedIn profile
 - Add some basic styling to the page
