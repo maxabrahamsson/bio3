@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
 import { PDFExport } from "@progress/kendo-react-pdf";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import { withStyles } from "@material-ui/core/styles";
 import moment from "moment";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import purple from "@material-ui/core/colors/purple";
+import green from "@material-ui/core/colors/green";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import { HashRouter, Route, Link } from "react-router-dom";
-import RaisedButton from "material-ui/RaisedButton";
-import AppBar from "material-ui/AppBar";
+import AppBar from "@material-ui/core/AppBar";
 import Grid from "@material-ui/core/Grid";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
 import ReactDOM from "react-dom";
 
@@ -32,15 +40,29 @@ class App extends Component {
   render() {
     if (this.state.data.length === 0) return <div />;
     return (
-      <MuiThemeProvider>
+      <div>
+        <CssBaseline />
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
         <HashRouter>
           <div>
-            <AppBar title="Ahmet Yildirim" iconElementLeft={<DropdownMenu />} />
+            <AppBar position="static" iconElementLeft={<DropdownMenu />}>
+              <Toolbar>
+                <IconButton color="inherit" aria-label="Menu">
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" color="inherit">
+                  Ahmet Yildirim
+                </Typography>
+                <Button color="inherit">Login</Button>
+              </Toolbar>
+            </AppBar>
             <Route path="/" exact component={this.Index} />
             <Route path="/pdf/" component={this.Pdf} />
           </div>
         </HashRouter>
-      </MuiThemeProvider>
+      </div>
     );
   }
   Index = () => this.renderPortfolio();
