@@ -61,6 +61,11 @@ class App extends Component {
               </Alert.Link>
             </Alert>
           </Navbar>
+          <Route
+            path="/"
+            exact
+            component={() => <Main data={this.state.data} />}
+          />
           {Pages.map((page, i) => {
             return (
               <Route
