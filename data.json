@@ -131,22 +131,57 @@
       "linkTo": "https://www.enneagraminstitute.com/type-3"
     }
   ],
+  "awards": [
+    {
+      "text": "Congratulatory Certificate from Sakarya University",
+      "linkTo": "",
+      "Prize": "Ceremonial event held in the recognition of succesful projects"
+    },
+    {
+      "text": "GencsenGeleceksin 5.0 Winner ( Windows Phone 8 App Competition by Microsoft & Nokia)",
+      "linkTo": "",
+      "Prize": "Windows 8 Smartphone"
+    },
+    {
+      "text": "Intel Tizen Developer Contest Grand Prizer Winner",
+      "linkTo": "https://web.archive.org/web/20161222180008/https://developer.tizen.org/blogs/captgeek/2013/winners-announced-tizen-contest",
+      "Prize": "$4000 worth computer - 2013 Macbook Pro Retina with the highest configuration"
+    }
+  ],
+  "talks": [
+    {
+      "text": "Arduino Day 2017 - Electric Skateboard",
+      "linkTo": "https://www.slideshare.net/mclightning/electric-skateboard-arduino-day-2017-talk"
+    },
+    {
+      "text": "Arduino Day 2016 - Modular Remote - Smart and universal remote solution for all your devices",
+      "linkTo": "http://www.slideshare.net/mclightning/modular-remote"
+    },
+    {
+      "text": "Droidcon Berlin 2015 - OpenGL Integration on SmartEyeglass",
+      "linkTo": "https://www.youtube.com/watch?v=fY1-2q0l38Y&t=1142s"
+    },
+    {
+      "text": "Arduino Day 2015 - OpenVR - Oculus Rift DK1 clone with Arduino",
+      "linkTo": "http://www.slideshare.net/mclightning/openvr-at-arduino-day-malm"
+    },
+    {
+      "text": "DroidCon Berlin 2015 - OpenGL on SmartEyeglass",
+      "linkTo": "https://youtu.be/fY1-2q0l38Y?t=838"
+    },
+    {
+      "text": "Interview with Hardware+ Magazine about OpenVR",
+      "linkTo": "https://www.youtube.com/watch?v=Q8SFLw7OgOU"
+    },
+    {
+      "text": "Guest speaker at Bahcesehir University - 3D Printing & Innovation",
+      "linkTo": "http://www.slideshare.net/mclightning/3d-production-and-imagination"
+    }
+  ],
   "publicity": [
     {
       "text": "Sony DeveloperWorld article about Livestreaming App with SmartEyeglass for remote guidance",
       "linkTo": "https://developer.sony.com/2016/01/28/livestreaming-app-for-smarteyeglass-available-as-open-source-project/"
-    },
-    {
-      "text": "Talk at Arduino Day 2016 - Modular Remote - Smart and universal remote solution for all your devices",
-      "linkTo": "http://www.slideshare.net/mclightning/modular-remote"
-    },
-    {
-      "text": "Talk at Arduino Day 2015 - OpenVR - Oculus Rift DK1 clone with Arduino",
-      "linkTo": "http://www.slideshare.net/mclightning/openvr-at-arduino-day-malm"
-    },
-    {
-      "text": "Talk at DroidCon Berlin 2015 - OpenGL on SmartEyeglass",
-      "linkTo": "https://youtu.be/fY1-2q0l38Y?t=838"
     },
     {
       "text": "Sony DeveloperWorld article about using OpenGL for SmartEyeglass",
@@ -157,20 +192,8 @@
       "linkTo": "http://mclightning.com/openvr-3-aftermath/"
     },
     {
-      "text": "Guest speaker at Bahcesehir University - 3D Printing & Innovation",
-      "linkTo": "http://www.slideshare.net/mclightning/3d-production-and-imagination"
-    },
-    {
       "text": "Interview with FierceDeveloper Magazine",
       "linkTo": "https://web.archive.org/web/20160410134822/http://www.fiercedeveloper.com/story/tizen-generating-early-momentum-among-developers/2013-03-04"
-    },
-    {
-      "text": "GencsenGeleceksin 5.0 Winner ( Windows Phone 8 App Competition by Microsoft & Nokia)",
-      "linkTo": ""
-    },
-    {
-      "text": "Intel Tizen Developer Contest Grand Prizer Winner",
-      "linkTo": "https://web.archive.org/web/20161222180008/https://developer.tizen.org/blogs/captgeek/2013/winners-announced-tizen-contest"
     },
     {
       "text": "OBWIOUS on Hackaday.com",
@@ -191,239 +214,245 @@
   ],
   "experiments": [
     {
+      "title": "Electric Skateboard",
+      "subtext": "RF/BT Remote, Android App, Standalone RF Remote",
+      "image": "images/ahmetseboard.jpg",
+      "linkTo": "https://www.youtube.com/watch?v=Ym-OL_tGFy0"
+    },
+    {
       "title": "Frakt!",
       "subtext": "SaaS Business MVP, P2P Crowdsourced shipping",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/frakt.png",
+      "image": "images/frakt.png",
       "linkTo": "https://frakt.ahmet.se"
     },
     {
       "title": "Modular Remote",
       "subtext": "Infrared/BT/HID universal command center",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/modularremote.jpg",
+      "image": "images/modularremote.jpg",
       "linkTo": "http://www.slideshare.net/mclightning/modular-remote"
-    },
-    {
-      "title": "TetraDroid",
-      "subtext": "Yet Another Tetris Game",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/tetra.jpg",
-      "linkTo": "https://play.google.com/store/apps/details?id=com.ahmet.tetris"
-    },
-    {
-      "title": "SuperAnt!",
-      "subtext": "Experimental Android Game",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/ant.jpg",
-      "linkTo": "https://play.google.com/store/apps/details?id=com.awesome.android"
-    },
-    {
-      "title": "Gravitan",
-      "subtext": "Experimental Android Game",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/gravitan.png",
-      "linkTo": "http://mclightning.com/gravitan-entertainment-app-for-android/uncategorized"
-    },
-    {
-      "title": "3D Display",
-      "subtext": "Augmented Reality",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/aropencv.jpg",
-      "linkTo": "http://mclightning.com/opensourceopencv-irrlicht-integration-head-tracking/announcements"
-    },
-    {
-      "title": "Midi Controller Shield",
-      "subtext": "for Arduino",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/midi.jpg",
-      "linkTo": "http://www.youtube.com/watch?v=fZ4_4-pTVAY&feature=plcp"
-    },
-    {
-      "title": "Motor Driver Shield",
-      "subtext": "for Arduino",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/narduinoshield.jpg",
-      "linkTo": "http://mclightning.com/narduino"
-    },
-    {
-      "title": "Narduino",
-      "subtext": "Telepresence Robot",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/narduinotelepresence.jpg",
-      "linkTo": "http://mclightning.com/narduino"
-    },
-    {
-      "title": "LCD Monitoring Shield",
-      "subtext": "for Arduino",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/lcdmonitor.jpg",
-      "linkTo": "http://mclightning.com/narduino-ir-liqard-appearance-on-makeblog/uncategorized"
-    },
-    {
-      "title": "USB Infrared Receiver",
-      "subtext": "",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/irreceive.jpg",
-      "linkTo": "http://mclightning.com/diy-irreceiver-project/uncategorized"
-    }
-  ],
-  "projects": [
-    {
-      "title": "Electric Skateboard",
-      "subtext": "RF/BT Remote, Android App, Standalone RF Remote",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/ahmetseboard.jpg",
-      "linkTo": "https://www.youtube.com/watch?v=Ym-OL_tGFy0"
     },
     {
       "title": "Android Full VR",
       "subtext": "Native SurfaceFlinger patch",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/sbs.jpg",
+      "image": "images/sbs.jpg",
       "linkTo": "https://play.google.com/store/apps/details?id=com.mclightning.autosbs"
     },
     {
       "title": "OpenVR",
       "subtext": "",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/openvr.jpg",
+      "image": "images/openvr.jpg",
       "linkTo": "https://mclightning.com/openvr"
+    },
+    {
+      "title": "GearTornado",
+      "subtext": "PC, Web, Android",
+      "image": "images/geartornado.jpg",
+      "linkTo": "https://web.archive.org/web/20170103154751/http://geartornado.com/"
+    },
+    {
+      "title": "Buck Buck : Johnny on a pony!",
+      "subtext": "Web, Android",
+      "image": "images/buckbuck.jpg",
+      "linkTo": "https://play.google.com/store/apps/details?id=com.bolt.buckbuck"
+    },
+    {
+      "title": "XBMC Remote For Sony",
+      "subtext": "Android",
+      "image": "images/xbmc.jpg",
+      "linkTo": "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.xbmcsw"
+    },
+    {
+      "title": "PeekScreen for Sony SmartWatches",
+      "subtext": "Android",
+      "image": "images/peek2.jpg",
+      "linkTo": "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.peekscreen"
+    },
+    {
+      "title": "PeekScreen for Sony LiveView",
+      "subtext": "Android",
+      "image": "images/liveview.jpg",
+      "linkTo": "https://play.google.com/store/apps/details?id=com.sonyericsson.extras.liveview.plugins.peekscreen"
+    },
+    {
+      "title": "LunarCannon",
+      "subtext": "Android & Tizen Port",
+      "image": "images/lunar2.jpg",
+      "linkTo": "http://www.mclightning.com/lunar"
+    },
+    {
+      "title": "OBWIOUS",
+      "subtext": "Bluetooth Watch",
+      "image": "images/watch.jpg",
+      "linkTo": "http://mclightning.com/innowatch-opensource-bluetooth-watch-initiative/announcements/"
+    },
+    {
+      "title": "LunarCannon",
+      "subtext": "HTML5 Canvas Game",
+      "image": "images/ufoga.jpg",
+      "linkTo": "http://mclightning.com/lunar"
+    },
+    {
+      "title": "TetraDroid",
+      "subtext": "Yet Another Tetris Game",
+      "image": "images/tetra.jpg",
+      "linkTo": "https://play.google.com/store/apps/details?id=com.ahmet.tetris"
+    },
+    {
+      "title": "SuperAnt!",
+      "subtext": "Experimental Android Game",
+      "image": "images/ant.jpg",
+      "linkTo": "https://play.google.com/store/apps/details?id=com.awesome.android"
+    },
+    {
+      "title": "Gravitan",
+      "subtext": "Experimental Android Game",
+      "image": "images/gravitan.png",
+      "linkTo": "http://mclightning.com/gravitan-entertainment-app-for-android/uncategorized"
+    },
+    {
+      "company": "sakarya",
+      "title": "Quadrotor Initiative",
+      "subtext": "",
+      "image": "images/saucopter.jpg",
+      "linkTo": "http://mclightning.com/quadrotor-long-story-short/3dsmax"
+    },
+    {
+      "title": "nGun",
+      "subtext": "Symbian S60v3",
+      "image": "images/ngun.jpg",
+      "linkTo": "http://mclightning.com/ngun"
+    },
+    {
+      "title": "AlertMe",
+      "subtext": "Symbian S60v3",
+      "image": "images/alertme.jpg",
+      "linkTo": "http://mclightning.com/alertme"
+    },
+    {
+      "title": "3D Display",
+      "subtext": "Augmented Reality",
+      "image": "images/aropencv.jpg",
+      "linkTo": "http://mclightning.com/opensourceopencv-irrlicht-integration-head-tracking/announcements"
+    },
+    {
+      "title": "Midi Controller Shield",
+      "subtext": "for Arduino",
+      "image": "images/midi.jpg",
+      "linkTo": "http://www.youtube.com/watch?v=fZ4_4-pTVAY&feature=plcp"
+    },
+    {
+      "title": "Motor Driver Shield",
+      "subtext": "for Arduino",
+      "image": "images/narduinoshield.jpg",
+      "linkTo": "http://mclightning.com/narduino"
+    },
+    {
+      "title": "Narduino",
+      "subtext": "Telepresence Robot",
+      "image": "images/narduinotelepresence.jpg",
+      "linkTo": "http://mclightning.com/narduino"
+    },
+    {
+      "title": "LCD Monitoring Shield",
+      "subtext": "for Arduino",
+      "image": "images/lcdmonitor.jpg",
+      "linkTo": "http://mclightning.com/narduino-ir-liqard-appearance-on-makeblog/uncategorized"
+    },
+    {
+      "title": "USB Infrared Receiver",
+      "subtext": "",
+      "image": "images/irreceive.jpg",
+      "linkTo": "http://mclightning.com/diy-irreceiver-project/uncategorized"
+    }
+  ],
+  "projects": [
+    {
+      "title": "SwimAR",
+      "subtext": "AR Swimming Goggles",
+      "image": "images/swimar.jpg",
+      "linkTo": "https://www.swimar.co.uk"
     },
     {
       "company": "sony",
       "title": "Livestream with SmartEyeglass",
       "subtext": "Android, AR, SmartEyeglass",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/seglivestream.jpg",
+      "image": "images/seglivestream.jpg",
       "linkTo": "https://developer.sony.com/2016/01/28/livestreaming-app-for-smarteyeglass-available-as-open-source-project/"
     },
     {
       "company": "sony",
       "title": "OpenGL on SmartEyeglass",
       "subtext": "Android, AR, SmartEyeglass",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/seg3d.jpg",
+      "image": "images/seg3d.jpg",
       "linkTo": "https://developer.sony.com/2014/12/11/learn-how-to-display-3d-graphics-on-smarteyeglass/"
-    },
-    {
-      "title": "Buck Buck : Johnny on a pony!",
-      "subtext": "Web, Android",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/buckbuck.jpg",
-      "linkTo": "https://play.google.com/store/apps/details?id=com.bolt.buckbuck"
-    },
-    {
-      "title": "GearTornado",
-      "subtext": "PC, Web, Android",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/geartornado.jpg",
-      "linkTo": "https://web.archive.org/web/20170103154751/http://geartornado.com/"
-    },
-    {
-      "title": "XBMC Remote For Sony",
-      "subtext": "Android",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/xbmc.jpg",
-      "linkTo": "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.xbmcsw"
-    },
-    {
-      "title": "PeekScreen for Sony SmartWatches",
-      "subtext": "Android",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/peek2.jpg",
-      "linkTo": "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.peekscreen"
-    },
-    {
-      "title": "PeekScreen for Sony LiveView",
-      "subtext": "Android",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/liveview.jpg",
-      "linkTo": "https://play.google.com/store/apps/details?id=com.sonyericsson.extras.liveview.plugins.peekscreen"
     },
     {
       "company": "buzz",
       "title": "Diabetia",
       "subtext": "Web, iOS",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/diabetia.jpg",
+      "image": "images/diabetia.jpg",
       "linkTo": ""
     },
     {
       "company": "buzz",
       "title": "The Most Awesome Game",
       "subtext": "Kinect Ad Stand",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/doguscay.jpg",
+      "image": "images/doguscay.jpg",
       "linkTo": ""
     },
     {
       "company": "buzz",
       "title": "Jewel Hunting",
       "subtext": "Kinect Ad Stand",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/molped.jpg",
+      "image": "images/molped.jpg",
       "linkTo": ""
     },
     {
       "company": "buzz",
       "title": "The Risk Hunters",
       "subtext": "Kinect Ad Stand",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/adstand.jpg",
+      "image": "images/adstand.jpg",
       "linkTo": "http://www.youtube.com/watch?v=CORwDsC60as"
     },
     {
       "title": "Pattison Institute",
       "subtext": "CMS, CRM, PHP",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/pattison.jpg",
+      "image": "images/pattison.jpg",
       "linkTo": "http://pattisoninstitute.com/"
-    },
-    {
-      "title": "LunarCannon",
-      "subtext": "Android & Tizen Port",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/lunar2.jpg",
-      "linkTo": "http://www.mclightning.com/lunar"
     },
     {
       "title": "GlassLayer",
       "subtext": "PHP, JS, CRM",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/gapz.jpg",
+      "image": "images/gapz.jpg",
       "linkTo": "http://www.glasslayer.com"
-    },
-    {
-      "title": "OBWIOUS",
-      "subtext": "Bluetooth Watch",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/watch.jpg",
-      "linkTo": "http://mclightning.com/innowatch-opensource-bluetooth-watch-initiative/announcements/"
-    },
-    {
-      "title": "LunarCannon",
-      "subtext": "HTML5 Canvas Game",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/ufoga.jpg",
-      "linkTo": "http://mclightning.com/lunar"
     },
     {
       "company": "elektropan",
       "title": "Elektropan",
       "subtext": "Customer Data Monitoring Panel",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/emetre.jpg",
+      "image": "images/emetre.jpg",
       "linkTo": "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
     },
     {
       "company": "elektropan",
       "title": "Elektropan",
       "subtext": "CMS & Portal",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/elektropan.jpg",
+      "image": "images/elektropan.jpg",
       "linkTo": "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
     },
     {
       "company": "elektropan",
       "title": "Elektropan",
       "subtext": "Multi-Threaded TCPIP Server with .NET",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/epan.jpg",
+      "image": "images/epan.jpg",
       "linkTo": "https://web.archive.org/web/20111211210337/http://www.elektropan.com:80/"
     },
     {
       "company": "sakarya",
       "title": "Sakarya University SBE",
       "subtext": "CMS & Portal",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/sbet.jpg",
+      "image": "images/sbet.jpg",
       "linkTo": "http://www.sbe.sakarya.edu.tr"
-    },
-    {
-      "company": "sakarya",
-      "title": "Quadrotor Initiative",
-      "subtext": "",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/saucopter.jpg",
-      "linkTo": "http://mclightning.com/quadrotor-long-story-short/3dsmax"
-    },
-    {
-      "title": "nGun",
-      "subtext": "Symbian S60v3",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/ngun.jpg",
-      "linkTo": "http://mclightning.com/ngun"
-    },
-    {
-      "title": "AlertMe",
-      "subtext": "Symbian S60v3",
-      "image": "https://raw.githubusercontent.com/ayildirim/bio/master/images/alertme.jpg",
-      "linkTo": "http://mclightning.com/alertme"
     }
   ]
 }
