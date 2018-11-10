@@ -9,6 +9,7 @@ import Button from "react-bootstrap/lib/Button";
 import Container from "react-bootstrap/lib/Container";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
+import Alert from "react-bootstrap/lib/Alert";
 
 import ReactDOM from "react-dom";
 
@@ -43,6 +44,9 @@ class App extends Component {
                 <Nav.Link href="/#/pdf/">PDF Resume</Nav.Link>
               </Nav>
             </Navbar.Collapse>
+            <Alert key="info" variant="info">
+              Under construction
+            </Alert>
           </Navbar>
           <Route path="/" exact component={this.Index} />
           <Route path="/pdf/" component={this.Pdf} />
