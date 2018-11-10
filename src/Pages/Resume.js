@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { PDFExport } from "@progress/kendo-react-pdf";
 import moment from "moment";
-import Nav from "react-bootstrap/lib/Nav";
-import Navbar from "react-bootstrap/lib/Navbar";
 import Button from "react-bootstrap/lib/Button";
 import Container from "react-bootstrap/lib/Container";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
-import Alert from "react-bootstrap/lib/Alert";
 
 class Resume extends Component {
   exportPDF = () => {
@@ -69,7 +66,7 @@ class Resume extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {this.props.companies.map((item, i) => {
+                    {this.props.data.companies.map((item, i) => {
                       const start = moment(item.start, "DD.MM.YYYY");
                       const end = moment(item.end, "DD.MM.YYYY");
                       return [

@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import fetch from "isomorphic-fetch";
-import { PDFExport } from "@progress/kendo-react-pdf";
-import moment from "moment";
-import { HashRouter, Route, Link } from "react-router-dom";
-import Nav from "react-bootstrap/lib/Nav";
-import Navbar from "react-bootstrap/lib/Navbar";
-import Button from "react-bootstrap/lib/Button";
 import Container from "react-bootstrap/lib/Container";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
-import Alert from "react-bootstrap/lib/Alert";
+import Image from "react-bootstrap/lib/Image";
+import Card from "react-bootstrap/lib/Card";
+import Button from "react-bootstrap/lib/Button";
 
 class Main extends Component {
   render() {
@@ -24,38 +19,6 @@ class Main extends Component {
           <Col md={6}>{this.renderList("Publicity", data.publicity)}</Col>
           <Col md={6}>
             {this.renderList("Interests & Characteristics", data.interests)}
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}>
-            <h2 id="works">Finished Projects & Works</h2>
-            <div className="App-intro">
-              {data.projects.map((project, i) => {
-                return this.renderProject(
-                  project.image,
-                  project.title,
-                  project.subtext,
-                  project.linkTo,
-                  i
-                );
-              })}
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}>
-            <h2 id="works">Experiments & Concept Projects</h2>
-            <div className="App-intro">
-              {data.experiments.map((project, i) => {
-                return this.renderProject(
-                  project.image,
-                  project.title,
-                  project.subtext,
-                  project.linkTo,
-                  i
-                );
-              })}
-            </div>
           </Col>
         </Row>
       </Container>
@@ -88,26 +51,21 @@ class Main extends Component {
     key: number
   ) {
     return (
-      <div key={key}>
-        <a href={linkTo} className="endislink">
-          <div className="endis">
-            <div
-              className="resim"
-              style={{
-                backgroundImage: `url(
-                  ${url})`
-              }}
-            >
-              <div className="caption">
-                <div>
-                  {title}{" "}
-                  {subtext && <span className="subtext">({subtext})</span>}
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
+      <Col md={2}>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={url} />
+          <Card.Body>
+            <Card.Title>
+              <Button variant="link" href={linkTo}>
+                {title}
+              </Button>
+            </Card.Title>
+            <Card.Text>
+              {subtext && <span className="subtext">({subtext})</span>}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
     );
   }
 }
