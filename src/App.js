@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
 import { PDFExport } from "@progress/kendo-react-pdf";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import moment from "moment";
 import { HashRouter, Route, Link } from "react-router-dom";
-import RaisedButton from "material-ui/RaisedButton";
-import AppBar from "material-ui/AppBar";
+import Nav from "react-bootstrap/lib/Nav";
+import Navbar from "react-bootstrap/lib/Navbar";
+import Button from "react-bootstrap/lib/Button";
+import Container from "react-bootstrap/lib/Container";
+import Row from "react-bootstrap/lib/Row";
+import Col from "react-bootstrap/lib/Col";
 
 import ReactDOM from "react-dom";
 
 import "./App.scss";
-import DropdownMenu from "./components/DropdownMenu";
-import Profiles from "./components/Profiles";
 
 type TextItem = {
   text: string,
@@ -31,15 +32,22 @@ class App extends Component {
   render() {
     if (this.state.data.length === 0) return <div />;
     return (
-      <MuiThemeProvider>
-        <HashRouter>
-          <div>
-            <AppBar title="Ahmet Yildirim" iconElementLeft={<DropdownMenu />} />
-            <Route path="/" exact component={this.Index} />
-            <Route path="/pdf/" component={this.Pdf} />
-          </div>
-        </HashRouter>
-      </MuiThemeProvider>
+      <HashRouter>
+        <div>
+          <Navbar bg="light" expand="lg">
+            <Navbar.Brand href="#home">Ahmet Yildirim</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link href="/#/">Home</Nav.Link>
+                <Nav.Link href="/#/pdf/">PDF Resume</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          <Route path="/" exact component={this.Index} />
+          <Route path="/pdf/" component={this.Pdf} />
+        </div>
+      </HashRouter>
     );
   }
   Index = () => this.renderPortfolio();
@@ -48,7 +56,9 @@ class App extends Component {
   renderPDFView() {
     return (
       <div style={{ align: "center", width: "%100" }}>
-        <button onClick={this.exportPDF}>Download PDF</button>
+        <Button variant="primary" onClick={this.exportPDF}>
+          Download PDF
+        </Button>
         <PDFExport
           paperSize={"Letter"}
           fileName={
@@ -121,56 +131,53 @@ class App extends Component {
 
   renderPortfolio() {
     return (
-      <div className="App">
-        <div style={{ width: "100%", float: "left" }}>
-          {this.renderList("Education", this.state.data.education)}
-          <div style={HalfDiv}>
-            <Profiles profiles={this.state.data.profiles} />
-          </div>
-        </div>
-
-        <div style={{ width: "100%", float: "left" }}>
-          {this.renderList("Publicity", this.state.data.publicity)}
-          {this.renderList(
-            "Interests & Characteristics",
-            this.state.data.interests
-          )}
-        </div>
-        <div style={{ width: "100%", float: "left" }}>
-          <h2 id="works">Finished Projects & Works</h2>
-          <div style={{ width: "100%", float: "left" }} align="left">
-            <p>
-              This section of the portfolio was last updated on 2017 March.
-              Please visit my LinkedIn profile for more up-to-date portfolio.
-            </p>
-          </div>
-          <div className="App-intro">
-            {this.state.data.projects.map((project, i) => {
-              return this.renderProject(
-                project.image,
-                project.title,
-                project.subtext,
-                project.linkTo,
-                i
-              );
-            })}
-          </div>
-        </div>
-        <div style={{ width: "100%", float: "left" }}>
-          <h2 id="works">Experiments & Concept Projects</h2>
-          <div className="App-intro">
-            {this.state.data.experiments.map((project, i) => {
-              return this.renderProject(
-                project.image,
-                project.title,
-                project.subtext,
-                project.linkTo,
-                i
-              );
-            })}
-          </div>
-        </div>
-      </div>
+      <Container>
+        <Row>
+          <Col>{this.renderList("Education", this.state.data.education)}</Col>
+          <Col>{this.renderList("Profiles", this.state.data.profiles)}</Col>
+        </Row>
+        <Row>
+          <Col>{this.renderList("Publicity", this.state.data.publicity)}</Col>
+          <Col>
+            {this.renderList(
+              "Interests & Characteristics",
+              this.state.data.interests
+            )}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h2 id="works">Finished Projects & Works</h2>
+            <div className="App-intro">
+              {this.state.data.projects.map((project, i) => {
+                return this.renderProject(
+                  project.image,
+                  project.title,
+                  project.subtext,
+                  project.linkTo,
+                  i
+                );
+              })}
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h2 id="works">Experiments & Concept Projects</h2>
+            <div className="App-intro">
+              {this.state.data.experiments.map((project, i) => {
+                return this.renderProject(
+                  project.image,
+                  project.title,
+                  project.subtext,
+                  project.linkTo,
+                  i
+                );
+              })}
+            </div>
+          </Col>
+        </Row>
+      </Container>
     );
   }
   componentDidMount() {
@@ -223,7 +230,7 @@ class App extends Component {
 
   renderList(title: string, list: Array<TextItem>) {
     return (
-      <div style={HalfDiv}>
+      <div>
         <h2>{title}</h2>
         <ul>
           {list.map((item, i) => {
@@ -241,10 +248,5 @@ class App extends Component {
     );
   }
 }
-
-const HalfDiv = {
-  width: "50%",
-  float: "left"
-};
 
 export default App;
