@@ -45,7 +45,10 @@ class App extends Component {
               </Nav>
             </Navbar.Collapse>
             <Alert key="info" variant="info">
-              Under construction
+              Under construction -{" "}
+              <Alert.Link href="https://github.com/ayildirim/bio2">
+                See what's cooking
+              </Alert.Link>
             </Alert>
           </Navbar>
           <Route path="/" exact component={this.Index} />
