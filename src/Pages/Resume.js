@@ -5,12 +5,27 @@ import Button from "react-bootstrap/lib/Button";
 import Container from "react-bootstrap/lib/Container";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
+import Papa from "papaparse";
 
-class Resume extends Component {
+type Props = {
+  data: Object
+};
+
+class Resume extends Component<Props> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
+
   exportPDF = () => {
     this.resume.save();
   };
+
   render() {
+    const { data } = this.state;
+    if (data.length === 0) return <div />;
     return (
       <Container>
         <Row>
@@ -21,14 +36,16 @@ class Resume extends Component {
           </Col>
           <Col md={12}>
             <PDFExport
-              paperSize={"Letter"}
-              fileName={
-                "AhmetYildirim_Resume_" + moment().format("DDMMYYYY") + ".pdf"
-              }
+              paperSize="Letter"
+              fileName={`AhmetYildirim_Resume_${moment().format(
+                "DDMMYYYY"
+              )}.pdf`}
               title=""
               subject=""
               keywords=""
-              ref={r => (this.resume = r)}
+              ref={r => {
+                this.resume = r;
+              }}
             >
               <div
                 style={{
@@ -66,20 +83,21 @@ class Resume extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {this.props.data.companies.map((item, i) => {
-                      const start = moment(item.start, "DD.MM.YYYY");
-                      const end = moment(item.end, "DD.MM.YYYY");
+                    {data.map(item => {
+                      const start = moment(item["Started On"], "MMM YYYY");
+                      const end = moment(item["Finished On"], "MMM YYYY");
                       return [
-                        <tr style={{ fontWeight: "bold" }} key={"tr_" + i}>
-                          <td align="left">{item.title}</td>
-                          <td align="center">{item.name}</td>
+                        <tr style={{ fontWeight: "bold" }}>
+                          <td align="left">{item.Title}</td>
+                          <td align="center">{item["Company Name"]}</td>
                           <td align="right">
-                            {start.format("MMM YYYY")} -{" "}
-                            {end.format("MMM YYYY")}
+                            {`${start.format("MMM YYYY")} ${end.format(
+                              "MMM YYYY"
+                            )}`}
                           </td>
                         </tr>,
-                        <tr key={"tr2_" + i}>
-                          <td colSpan="3">{item.description}</td>
+                        <tr>
+                          <td colSpan="3">{item.Description}</td>
                         </tr>
                       ];
                     })}
@@ -92,6 +110,24 @@ class Resume extends Component {
       </Container>
     );
   }
+
+  componentDidMount() {
+    this.initialize();
+  }
+
+  initialize = async () => {
+    await Papa.parse("Positions.csv", {
+      header: true,
+      delimiter: ",",
+      download: true,
+      complete: results => {
+        results.data.pop();
+        this.setState({
+          data: results.data
+        });
+      }
+    });
+  };
 }
 
 export default Resume;
