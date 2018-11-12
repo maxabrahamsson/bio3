@@ -1,61 +1,58 @@
 import React, { Component } from "react";
-import { PDFExport } from "@progress/kendo-react-pdf";
-import moment from "moment";
 import Button from "react-bootstrap/lib/Button";
 import Container from "react-bootstrap/lib/Container";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Card from "react-bootstrap/lib/Card";
+import CardColumns from "react-bootstrap/lib/CardColumns";
 
-class Showcase extends Component {
+type Props = {
+  data: Object
+};
+
+class Showcase extends Component<Props> {
   render() {
+    const { data } = this.props;
     return (
       <Container>
-        <Row>
-          {this.props.data.projects.map((project, i) => {
-            return this.renderProject(
+        <CardColumns>
+          {data.projects.map((project, i) =>
+            this.renderProject(
               project.image,
               project.title,
               project.subtext,
               project.linkTo,
               i
-            );
-          })}
-        </Row>
+            )
+          )}
+        </CardColumns>
       </Container>
     );
   }
-  renderProject(
-    url: string,
-    title: string,
-    subtext: string,
-    linkTo: string,
-    key: number
-  ) {
+
+  renderProject(url: string, title: string, subtext: string, linkTo: string) {
     return (
-      <Col xs={6} md={3}>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={url}
-            style={{
-              width: "100%",
-              height: "15vw",
-              objectFit: "cover"
-            }}
-          />
-          <Card.Body>
-            <Card.Title>
-              <Button variant="link" href={linkTo}>
-                {title}
-              </Button>
-            </Card.Title>
-            <Card.Text>
-              {subtext && <span className="subtext">({subtext})</span>}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
+      <Card>
+        <Card.Img
+          variant="top"
+          src={url}
+          style={{
+            width: "100%",
+            height: "15vw",
+            objectFit: "cover"
+          }}
+        />
+        <Card.Body>
+          <Card.Title>
+            <Button variant="link" href={linkTo}>
+              {title}
+            </Button>
+          </Card.Title>
+          <Card.Text>
+            {subtext && <span className="subtext">({subtext})</span>}
+          </Card.Text>
+        </Card.Body>
+      </Card>
     );
   }
 }
