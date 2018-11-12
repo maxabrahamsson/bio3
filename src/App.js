@@ -5,13 +5,14 @@ import Nav from "react-bootstrap/lib/Nav";
 import Navbar from "react-bootstrap/lib/Navbar";
 import Alert from "react-bootstrap/lib/Alert";
 
-import "./App.scss";
+// Pages
 import Main from "./Pages/Main";
 import Resume from "./Pages/Resume";
 import Showcase from "./Pages/Showcase";
 import CaseStudies from "./Pages/CaseStudies";
 import Awards from "./Pages/Awards";
 import Talks from "./Pages/Talks";
+import Testimonials from "./Pages/Testimonials";
 
 const Pages = [
   { component: Main, link: "Home" },
@@ -19,13 +20,12 @@ const Pages = [
   { component: Showcase, link: "Showcase" },
   { component: CaseStudies, link: "Case Studies" },
   { component: Awards, link: "Awards" },
-  { component: Talks, link: "Talks" }
+  { component: Talks, link: "Talks" },
+  { component: Testimonials, link: "Testimonials" }
 ];
 
 const camelize = function camelize(str) {
-  return str.replace(/\W+(.)/g, function(match, chr) {
-    return chr.toUpperCase();
-  });
+  return str.replace(/\W+(.)/g, (match, chr) => chr.toUpperCase());
 };
 
 class App extends Component {
@@ -35,8 +35,10 @@ class App extends Component {
       data: []
     };
   }
+
   render() {
-    if (this.state.data.length === 0) return <div />;
+    const { data } = this.state;
+    if (data.length === 0) return <div />;
     return (
       <HashRouter>
         <div>
@@ -45,13 +47,11 @@ class App extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                {Pages.map((page, i) => {
-                  return (
-                    <Nav.Link href={"/#/" + camelize(page.link)}>
-                      {page.link}
-                    </Nav.Link>
-                  );
-                })}
+                {Pages.map(page => (
+                  <Nav.Link href={`/#/${camelize(page.link)}`}>
+                    {page.link}
+                  </Nav.Link>
+                ))}
               </Nav>
             </Navbar.Collapse>
             <Alert key="info" variant="info">
@@ -61,26 +61,16 @@ class App extends Component {
               </Alert.Link>
             </Alert>
           </Navbar>
-          <Route
-            path="/"
-            exact
-            component={() => <Main data={this.state.data} />}
-          />
-          {Pages.map((page, i) => {
-            return (
-              <Route
-                path={"/" + camelize(page.link)}
-                exact
-                component={() =>
-                  React.createElement(
-                    page.component,
-                    { data: this.state.data },
-                    ""
-                  )
-                }
-              />
-            );
-          })}
+          <Route path="/" exact component={() => <Main data={data} />} />
+          {Pages.map(page => (
+            <Route
+              path={`/${camelize(page.link)}`}
+              exact
+              component={() =>
+                React.createElement(page.component, { data }, "")
+              }
+            />
+          ))}
         </div>
       </HashRouter>
     );
