@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Container from "react-bootstrap/lib/Container";
-import Row from "react-bootstrap/lib/Row";
 import Card from "react-bootstrap/lib/Card";
 import CardDeck from "react-bootstrap/lib/CardDeck";
 import Papa from "papaparse";
@@ -22,8 +21,8 @@ class Testimonials extends Component {
           {data.map(item => (
             <Card>
               <Card.Header>{`${item["First Name"]} ${
-                item["Last Name"]
-              }`}</Card.Header>
+                item["Last Name"][0]
+              }.`}</Card.Header>
               <Card.Body>
                 <Card.Title>{`${item["Job Title"]} at ${
                   item.Company
