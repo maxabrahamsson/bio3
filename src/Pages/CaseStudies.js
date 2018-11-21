@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/lib/Button';
 import Container from 'react-bootstrap/lib/Container';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
 import Card from 'react-bootstrap/lib/Card';
 import CardColumns from 'react-bootstrap/lib/CardColumns';
 

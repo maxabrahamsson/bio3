@@ -7,11 +7,7 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Papa from 'papaparse';
 
-type Props = {
-  data: Object,
-};
-
-class Resume extends Component<Props> {
+class Resume extends Component {
   constructor(props) {
     super(props);
     this.state = {
