@@ -1,9 +1,10 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:flowtype/recommended"],
   "parser": "babel-eslint",
   "env": {
     "browser": true
   },
+  "plugins": ["flowtype"],
   "rules": {
     "react/default-props-match-prop-types": 0,
     "react/jsx-filename-extension": 0,

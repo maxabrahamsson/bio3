@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import { PDFExport } from "@progress/kendo-react-pdf";
-import moment from "moment";
-import Button from "react-bootstrap/lib/Button";
-import Container from "react-bootstrap/lib/Container";
-import Row from "react-bootstrap/lib/Row";
-import Col from "react-bootstrap/lib/Col";
-import Papa from "papaparse";
+import React, { Component } from 'react';
+import { PDFExport } from '@progress/kendo-react-pdf';
+import moment from 'moment';
+import Button from 'react-bootstrap/lib/Button';
+import Container from 'react-bootstrap/lib/Container';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Papa from 'papaparse';
 
 type Props = {
-  data: Object
+  data: Object,
 };
 
 class Resume extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
     };
   }
 
@@ -37,13 +37,11 @@ class Resume extends Component<Props> {
           <Col md={12}>
             <PDFExport
               paperSize="Letter"
-              fileName={`AhmetYildirim_Resume_${moment().format(
-                "DDMMYYYY"
-              )}.pdf`}
+              fileName={`AhmetYildirim_Resume_${moment().format('DDMMYYYY')}.pdf`}
               title=""
               subject=""
               keywords=""
-              ref={r => {
+              ref={(r) => {
                 this.resume = r;
               }}
             >
@@ -51,14 +49,14 @@ class Resume extends Component<Props> {
                 style={{
                   height: 792,
                   width: 612,
-                  padding: "none",
-                  backgroundColor: "white",
-                  boxShadow: "5px 5px 5px black",
-                  margin: "auto",
-                  overflowX: "hidden",
-                  overflowY: "hidden",
+                  padding: 'none',
+                  backgroundColor: 'white',
+                  boxShadow: '5px 5px 5px black',
+                  margin: 'auto',
+                  overflowX: 'hidden',
+                  overflowY: 'hidden',
                   fontSize: 11,
-                  fontFamily: "Calibri"
+                  fontFamily: 'Calibri',
                 }}
               >
                 <table>
@@ -74,8 +72,8 @@ class Resume extends Component<Props> {
                         align="center"
                         style={{
                           borderBottomWidth: 2,
-                          borderBottomColor: "black",
-                          borderBottomStyle: "solid"
+                          borderBottomColor: 'black',
+                          borderBottomStyle: 'solid',
                         }}
                       >
                         Employment
@@ -83,22 +81,20 @@ class Resume extends Component<Props> {
                     </tr>
                   </thead>
                   <tbody>
-                    {data.map(item => {
-                      const start = moment(item["Started On"], "MMM YYYY");
-                      const end = moment(item["Finished On"], "MMM YYYY");
+                    {data.map((item) => {
+                      const start = moment(item['Started On'], 'MMM YYYY');
+                      const end = moment(item['Finished On'], 'MMM YYYY');
                       return [
-                        <tr style={{ fontWeight: "bold" }}>
+                        <tr style={{ fontWeight: 'bold' }}>
                           <td align="left">{item.Title}</td>
-                          <td align="center">{item["Company Name"]}</td>
+                          <td align="center">{item['Company Name']}</td>
                           <td align="right">
-                            {`${start.format("MMM YYYY")} ${end.format(
-                              "MMM YYYY"
-                            )}`}
+                            {`${start.format('MMM YYYY')} ${end.format('MMM YYYY')}`}
                           </td>
                         </tr>,
                         <tr>
                           <td colSpan="3">{item.Description}</td>
-                        </tr>
+                        </tr>,
                       ];
                     })}
                   </tbody>
@@ -116,16 +112,16 @@ class Resume extends Component<Props> {
   }
 
   initialize = async () => {
-    await Papa.parse("Positions.csv", {
+    await Papa.parse('Positions.csv', {
       header: true,
-      delimiter: ",",
+      delimiter: ',',
       download: true,
-      complete: results => {
+      complete: (results) => {
         results.data.pop();
         this.setState({
-          data: results.data
+          data: results.data,
         });
-      }
+      },
     });
   };
 }
