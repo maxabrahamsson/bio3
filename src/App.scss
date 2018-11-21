@@ -1,69 +1,70 @@
-body {
-  display: block;
-}
-
-ul {
-  list-style: none;
-}
-h1,
-h2,
-h4,
-p,
-#about,
-li {
-}
-.endis {
-  margin: 5px;
+td,
+th {
   padding: 0;
-  border: 1px solid black;
-  border-bottom: 5px solid black;
-  width: 180px;
-  float: left;
+  margin: 0;
+}
+.bubble {
+  $border: 4px;
+  $radius: $border * 2.5;
+  $arrowWhiteCoverDistance: 25px;
+  $arrowTopDistance: 25px;
+
+  $borderColor: #7f7f7f;
+  $backgroundColor: #ffffff;
+
   position: relative;
-}
-.endislink {
-  cursor: pointer;
-  display: block;
-}
-.resim {
-  background-image: url("https://raw.githubusercontent.com/ayildirim/bio/master/images/gapz.jpg");
-  width: 180px;
-  height: 175px;
-  background-size: 180px 175px;
-}
-.caption {
-  cursor: pointer;
-  display: inline-block;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  float: left;
-  width: 180px;
-  background-color: gray;
-  color: white;
-  opacity: 0.8;
-  border-top: 1px solid black;
-  font-size: 16px;
-  a:hover {
-    background-color: white;
-    color: black;
+  padding: 0px;
+  background: $backgroundColor;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  border: $borderColor solid $border;
+
+  // Calculated Values
+  $borderOffset: $border * 0.75;
+  $arrowDistance: $arrowWhiteCoverDistance + $borderOffset + $border;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
   }
-  a img {
-    width: auto;
-    height: 35px;
-    float: right;
+  &:before {
+    right: -$arrowDistance;
+    z-index: 0;
+    border-color: transparent $borderColor;
+    top: $arrowTopDistance;
   }
-  div {
-    padding: 5px;
+  &:after {
+    top: $arrowTopDistance + $borderOffset;
+    z-index: 1;
+    border-color: transparent $backgroundColor;
   }
-}
-.subtext {
-  font-size: 12px;
-}
-.littlebox {
-  border: 1px solid black;
-  border-bottom: 5px solid black;
-}
-.littleboxic {
-  padding: 3px;
+  &:nth-child(even) {
+    &:after {
+      left: -$arrowWhiteCoverDistance;
+      border-width: $arrowWhiteCoverDistance - $borderOffset
+        $arrowWhiteCoverDistance $arrowWhiteCoverDistance - $borderOffset 0;
+    }
+    &:before {
+      left: -$arrowDistance;
+      border-width: $arrowWhiteCoverDistance $arrowDistance - $border
+        $arrowWhiteCoverDistance 0;
+    }
+  }
+  &:nth-child(odd) {
+    &:before {
+      right: -$arrowDistance;
+      border-width: $arrowWhiteCoverDistance 0 $arrowWhiteCoverDistance
+        $arrowDistance - $border;
+    }
+    &:after {
+      right: -$arrowWhiteCoverDistance;
+      border-width: $arrowWhiteCoverDistance - $borderOffset 0
+        $arrowWhiteCoverDistance - $borderOffset $arrowWhiteCoverDistance;
+    }
+  }
 }

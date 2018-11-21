@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/lib/Container';
 import Card from 'react-bootstrap/lib/Card';
-import CardDeck from 'react-bootstrap/lib/CardDeck';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 import Papa from 'papaparse';
 
 class Testimonials extends Component {
@@ -17,17 +18,29 @@ class Testimonials extends Component {
     if (data.length === 0) return <div />;
     return (
       <Container>
-        <CardDeck>
-          {data.map(item => (
-            <Card>
-              <Card.Header>{`${item['First Name']} ${item['Last Name'][0]}.`}</Card.Header>
-              <Card.Body>
-                <Card.Title>{`${item['Job Title']} at ${item.Company}`}</Card.Title>
-                {item.Text}
-              </Card.Body>
-            </Card>
-          ))}
-        </CardDeck>
+        <Row>
+          {data.map((item, i) => {
+            const fillerElement = (
+              <Col md={6}>
+                <Card>
+                  <Card.Body>
+                    <Card.Title>
+                      {`${item['First Name']} ${item['Last Name'][0]}.`}
+                      {`${item['Job Title']} at ${item.Company}`}
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+            return [
+              i % 2 === 0 ? fillerElement : null,
+              <Col className="bubble" md={6}>
+                <Card.Body>{item.Text}</Card.Body>
+              </Col>,
+              i % 2 !== 0 ? fillerElement : null,
+            ];
+          })}
+        </Row>
       </Container>
     );
   }

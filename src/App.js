@@ -14,6 +14,8 @@ import Awards from './Pages/Awards';
 import Talks from './Pages/Talks';
 import Testimonials from './Pages/Testimonials';
 
+import './App.scss';
+
 const Pages = [
   { component: Main, link: 'Home' },
   { component: Resume, link: 'Resume' },
