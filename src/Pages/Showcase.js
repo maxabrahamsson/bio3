@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/lib/Button';
 import Container from 'react-bootstrap/lib/Container';
 import Card from 'react-bootstrap/lib/Card';
 import CardColumns from 'react-bootstrap/lib/CardColumns';
+import ReactGA from 'react-ga';
 
 type Props = {
   data: Object,
@@ -34,9 +34,9 @@ class Showcase extends Component<Props> {
         />
         <Card.Body>
           <Card.Title>
-            <Button variant="link" href={linkTo}>
+            <ReactGA.OutboundLink eventLabel={`${linkTo}#${title}`} to={linkTo} target="_blank">
               {title}
-            </Button>
+            </ReactGA.OutboundLink>
           </Card.Title>
           <Card.Text>
             {subtext && (

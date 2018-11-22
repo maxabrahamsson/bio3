@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/lib/Container';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
+import ReactGA from 'react-ga';
 
 type Props = {
   data: Object,
@@ -34,7 +35,17 @@ class Main extends Component<Props> {
   }
 
   renderTextListItem(text: string, linkTo: string, key: number) {
-    return <li key={key}>{linkTo ? <a href={linkTo}>{text}</a> : <span>{text}</span>}</li>;
+    return (
+      <li key={key}>
+        {linkTo ? (
+          <ReactGA.OutboundLink eventLabel={linkTo} to={linkTo} target="_blank">
+            {text}
+          </ReactGA.OutboundLink>
+        ) : (
+          <span>{text}</span>
+        )}
+      </li>
+    );
   }
 }
 
