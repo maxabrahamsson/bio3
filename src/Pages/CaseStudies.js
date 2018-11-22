@@ -1,13 +1,11 @@
-import React, { Component } from "react";
-import Button from "react-bootstrap/lib/Button";
-import Container from "react-bootstrap/lib/Container";
-import Row from "react-bootstrap/lib/Row";
-import Col from "react-bootstrap/lib/Col";
-import Card from "react-bootstrap/lib/Card";
-import CardColumns from "react-bootstrap/lib/CardColumns";
+import React, { Component } from 'react';
+import Container from 'react-bootstrap/lib/Container';
+import Card from 'react-bootstrap/lib/Card';
+import CardColumns from 'react-bootstrap/lib/CardColumns';
+import ReactGA from 'react-ga';
 
 type Props = {
-  data: Object
+  data: Object,
 };
 
 class CaseStudies extends Component<Props> {
@@ -18,20 +16,18 @@ class CaseStudies extends Component<Props> {
           variant="top"
           src={url}
           style={{
-            width: "100%",
-            height: "15vw",
-            objectFit: "cover"
+            width: '100%',
+            height: '15vw',
+            objectFit: 'cover',
           }}
         />
         <Card.Body>
           <Card.Title>
-            <Button variant="link" href={linkTo}>
+            <ReactGA.OutboundLink eventLabel={`${linkTo}#${title}`} to={linkTo} target="_blank">
               {title}
-            </Button>
+            </ReactGA.OutboundLink>
           </Card.Title>
-          <Card.Text>
-            {subtext && <span className="subtext">{subtext}</span>}
-          </Card.Text>
+          <Card.Text>{subtext && <span className="subtext">{subtext}</span>}</Card.Text>
         </Card.Body>
       </Card>
     );
@@ -42,14 +38,7 @@ class CaseStudies extends Component<Props> {
     return (
       <Container>
         <CardColumns>
-          {data.experiments.map(project =>
-            this.renderProject(
-              project.image,
-              project.title,
-              project.subtext,
-              project.linkTo
-            )
-          )}
+          {data.experiments.map(project => this.renderProject(project.image, project.title, project.subtext, project.linkTo))}
         </CardColumns>
       </Container>
     );

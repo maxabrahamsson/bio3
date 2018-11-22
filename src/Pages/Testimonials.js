@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import Container from "react-bootstrap/lib/Container";
-import Card from "react-bootstrap/lib/Card";
-import CardDeck from "react-bootstrap/lib/CardDeck";
-import Papa from "papaparse";
+import React, { Component } from 'react';
+import Container from 'react-bootstrap/lib/Container';
+import Card from 'react-bootstrap/lib/Card';
+import CardDeck from 'react-bootstrap/lib/CardDeck';
+import Papa from 'papaparse';
 
 class Testimonials extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
     };
   }
 
@@ -20,13 +20,9 @@ class Testimonials extends Component {
         <CardDeck>
           {data.map(item => (
             <Card>
-              <Card.Header>{`${item["First Name"]} ${
-                item["Last Name"][0]
-              }.`}</Card.Header>
+              <Card.Header>{`${item['First Name']} ${item['Last Name'][0]}.`}</Card.Header>
               <Card.Body>
-                <Card.Title>{`${item["Job Title"]} at ${
-                  item.Company
-                }`}</Card.Title>
+                <Card.Title>{`${item['Job Title']} at ${item.Company}`}</Card.Title>
                 {item.Text}
               </Card.Body>
             </Card>
@@ -41,16 +37,16 @@ class Testimonials extends Component {
   }
 
   initialize = async () => {
-    await Papa.parse("Recommendations Received.csv", {
+    await Papa.parse('Recommendations Received.csv', {
       header: true,
-      delimiter: ",",
+      delimiter: ',',
       download: true,
-      complete: results => {
+      complete: (results) => {
         results.data.pop();
         this.setState({
-          data: results.data
+          data: results.data,
         });
-      }
+      },
     });
   };
 }

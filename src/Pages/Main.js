@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import Container from "react-bootstrap/lib/Container";
-import Row from "react-bootstrap/lib/Row";
-import Col from "react-bootstrap/lib/Col";
+import React, { Component } from 'react';
+import Container from 'react-bootstrap/lib/Container';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import ReactGA from 'react-ga';
 
 type Props = {
-  data: Object
+  data: Object,
 };
 
 class Main extends Component<Props> {
@@ -13,14 +14,12 @@ class Main extends Component<Props> {
     return (
       <Container>
         <Row>
-          <Col md={6}>{this.renderList("Education", data.education)}</Col>
-          <Col md={6}>{this.renderList("Profiles", data.profiles)}</Col>
+          <Col md={6}>{this.renderList('Education', data.education)}</Col>
+          <Col md={6}>{this.renderList('Profiles', data.profiles)}</Col>
         </Row>
         <Row>
-          <Col md={6}>{this.renderList("Publicity", data.publicity)}</Col>
-          <Col md={6}>
-            {this.renderList("Interests & Characteristics", data.interests)}
-          </Col>
+          <Col md={6}>{this.renderList('Publicity', data.publicity)}</Col>
+          <Col md={6}>{this.renderList('Interests & Characteristics', data.interests)}</Col>
         </Row>
       </Container>
     );
@@ -30,11 +29,7 @@ class Main extends Component<Props> {
     return (
       <div>
         <h2>{title}</h2>
-        <ul>
-          {list.map((item, i) =>
-            this.renderTextListItem(item.text, item.linkTo, i)
-          )}
-        </ul>
+        <ul>{list.map((item, i) => this.renderTextListItem(item.text, item.linkTo, i))}</ul>
       </div>
     );
   }
@@ -42,7 +37,13 @@ class Main extends Component<Props> {
   renderTextListItem(text: string, linkTo: string, key: number) {
     return (
       <li key={key}>
-        {linkTo ? <a href={linkTo}>{text}</a> : <span>{text}</span>}
+        {linkTo ? (
+          <ReactGA.OutboundLink eventLabel={linkTo} to={linkTo} target="_blank">
+            {text}
+          </ReactGA.OutboundLink>
+        ) : (
+          <span>{text}</span>
+        )}
       </li>
     );
   }
