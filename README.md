@@ -1,6 +1,19 @@
 [![CircleCI](https://circleci.com/gh/ayildirim/bio2.svg?style=svg)](https://circleci.com/gh/ayildirim/bio2)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/ayildirim/portfolio-page)
 
+## Features
+- Display data from LinkedIn profile data export ( Resume, Testimonial pages)
+- PDF export of the Resume
+- Google Analytics and GetClicky tracking
+
+### Future Goals
+- Nicer design
+- Hover over different parts of the page to see code for each section
+- Decouple CSV,JSON data from the code
+- Make a backend that handles CSV,JSON import into some DB
+- Maybe, Firebase login as the admin for content changes?
+- Some quick way to eject boilerplate out of this project with minimal platform in place
+
 ## Tech stack
 - React
 
@@ -30,7 +43,3 @@
 ### Recommended Tools
 - Use NVM to manage node versions
 - Use NPX to run NPM modules in a temporary installation rather than adding as a dependency, specifically for modules that you use rarely or one time.
-
-### Future Goals
-- Take data in from LinkedIn profile
-- Add some basic styling to the page
