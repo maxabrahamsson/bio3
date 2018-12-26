@@ -1,69 +1,145 @@
-body {
-  display: block;
+$color1: #003049;
+$color2: #d62828;
+$color3: #f77f00;
+$color4: #fcbf49;
+$color5: #eae2b7;
+$background: "http://localhost:3000/dust_scratches.png";
+
+html {
+  height: 100%;
 }
 
-ul {
-  list-style: none;
+body {
+  background-image: url($background);
+  height: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: $color1;
 }
-h1,
-h2,
-h4,
-p,
-#about,
-li {
+.alert {
+  color: $color1;
+  background-color: $color4;
+  border-radius: 15px;
 }
-.endis {
-  margin: 5px;
-  padding: 0;
-  border: 1px solid black;
-  border-bottom: 5px solid black;
-  width: 180px;
-  float: left;
-  position: relative;
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 4;
+    padding: 50px;
+  }
 }
-.endislink {
-  cursor: pointer;
-  display: block;
+.navbar {
+  background-image: url("http://localhost:3000/cloudy-day.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
-.resim {
-  background-image: url("https://raw.githubusercontent.com/ayildirim/bio/master/images/gapz.jpg");
-  width: 180px;
-  height: 175px;
-  background-size: 180px 175px;
-}
-.caption {
-  cursor: pointer;
-  display: inline-block;
+.fringe {
+  background-color: $color1;
+  width: 100%;
+  height: 10px;
   position: absolute;
-  bottom: 0px;
   left: 0;
-  float: left;
-  width: 180px;
-  background-color: gray;
-  color: white;
-  opacity: 0.8;
-  border-top: 1px solid black;
-  font-size: 16px;
-  a:hover {
-    background-color: white;
-    color: black;
+  bottom: 0;
+}
+.navbar-nav {
+  width: 100%;
+}
+.navbar-nav a {
+  margin-right: 10px;
+  background-color: rgba(112, 112, 112, 0.13);
+  border-radius: 25px;
+  text-align: center;
+  padding: 0;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+.navbar a {
+  color: $color1 !important;
+}
+.navbar-brand {
+  width: 100%;
+  text-align: center;
+}
+.card-body {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.card {
+  border-color: $color1;
+  margin-bottom: 25px;
+}
+.card:hover {
+  margin-bottom: 0;
+}
+.card-title a {
+  color: $color1;
+}
+.card-text {
+  color: $color1;
+  width: 100%;
+}
+.container {
+  padding: 50px;
+}
+.alert {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+$pos: percentage(random(100) / 100);
+
+@keyframes example {
+  0% {
+    background: linear-gradient($color3, $color4);
+    opacity: 0.1;
   }
-  a img {
-    width: auto;
-    height: 35px;
-    float: right;
+  25% {
+    opacity: 1;
   }
-  div {
-    padding: 5px;
+  100% {
+    bottom: 70%;
+    background: linear-gradient($color3, $color4);
+    opacity: 0.1;
   }
 }
-.subtext {
-  font-size: 12px;
+.circleBase {
+  border-radius: 50%;
 }
-.littlebox {
-  border: 1px solid black;
-  border-bottom: 5px solid black;
+
+.type {
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      left: percentage(random(100) / 100);
+      bottom: percentage((5 + random(10))/ 100);
+      animation-name: example;
+      animation-duration: #{10 + random(5)}s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: -1;
+    }
+  }
 }
-.littleboxic {
-  padding: 3px;
+/*
+.zig-zag-bottom:after {
+  background: linear-gradient(-45deg, $color1 16px, transparent 0),
+    linear-gradient(45deg, $color1 16px, transparent 0);
+  background-position: left top;
+  background-repeat: repeat-x;
+  background-size: 16px 32px;
+  content: " ";
+  display: block;
+
+  height: 32px;
+  width: 100%;
+
+  position: relative;
+  bottom: 32px;
+  left: 0;
 }
+*/

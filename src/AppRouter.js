@@ -8,6 +8,9 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import Nav from 'react-bootstrap/lib/Nav';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Alert from 'react-bootstrap/lib/Alert';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Container from 'react-bootstrap/lib/Container';
 import ReactGA from 'react-ga';
 import withTracker from './withTracker';
 
@@ -21,13 +24,12 @@ import Talks from './Pages/Talks';
 import Testimonials from './Pages/Testimonials';
 
 const Pages = [
-  { component: Main, link: 'Home' },
-  { component: Resume, link: 'Resume' },
   { component: Showcase, link: 'Showcase' },
   { component: CaseStudies, link: 'Case Studies' },
   { component: Awards, link: 'Awards' },
   { component: Talks, link: 'Talks' },
   { component: Testimonials, link: 'Testimonials' },
+  { component: Resume, link: 'Resume' },
 ];
 
 const camelize = function camelize(str) {
@@ -47,16 +49,28 @@ class AppRouter extends Component {
     if (data.length === 0) return <div />;
     return (
       <Router>
-        <div>
+        <div style={{ width: '100%' }}>
           <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/#/home">Ahmet Yildirim</Navbar.Brand>
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                {Pages.map(page => (
-                  <Nav.Link href={`/#/${camelize(page.link)}`}>{page.link}</Nav.Link>
-                ))}
-              </Nav>
-            </Navbar.Collapse>
+            <Container className="justify-content-center">
+              <Row>
+                <Col md={12}>
+                  <Navbar.Brand href="/#/Home">
+                    <h1>Ahmet Yildirim</h1>
+                  </Navbar.Brand>
+                </Col>
+                <Col md={12}>
+                  <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+                    <Nav className="mr-auto justify-content-center">
+                      {Pages.map(page => (
+                        <Nav.Link href={`/#/${camelize(page.link)}`}>
+                          <h5>{page.link}</h5>
+                        </Nav.Link>
+                      ))}
+                    </Nav>
+                  </Navbar.Collapse>
+                </Col>
+              </Row>
+            </Container>
             <Alert key="info" variant="info">
               {'Under construction - '}
               <ReactGA.OutboundLink
@@ -68,8 +82,9 @@ class AppRouter extends Component {
               </ReactGA.OutboundLink>
             </Alert>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <div className="fringe zig-zag-bottom" />
           </Navbar>
-          <Route path="/" exact component={withTracker(Main, { data })} />
+          <Route path="/Home" exact component={withTracker(Main, { data })} />
           {Pages.map(page => (
             <Route
               path={`/${camelize(page.link)}`}

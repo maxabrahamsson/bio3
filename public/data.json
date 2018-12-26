@@ -225,7 +225,7 @@
     },
     {
       "title": "OpenVR",
-      "subtext": "",
+      "subtext": "Open-source Oculus Rift DK1 Clone",
       "image": "images/openvr.jpg",
       "linkTo": "https://mclightning.com/openvr"
     },
@@ -242,20 +242,20 @@
       "linkTo": "https://play.google.com/store/apps/details?id=com.bolt.buckbuck"
     },
     {
-      "title": "XBMC Remote For Sony",
+      "title": "XBMC Remote",
       "subtext": "Android",
       "image": "images/xbmc.jpg",
       "linkTo": "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.xbmcsw"
     },
     {
-      "title": "PeekScreen for Sony SmartWatches",
-      "subtext": "Android",
+      "title": "PeekScreen",
+      "subtext": "for Sony SmartWatch 2",
       "image": "images/peek2.jpg",
       "linkTo": "https://play.google.com/store/apps/details?id=com.sonymobile.smartconnect.extension.peekscreen"
     },
     {
-      "title": "PeekScreen for Sony LiveView",
-      "subtext": "Android",
+      "title": "PeekScreen",
+      "subtext": "for Sony LiveView",
       "image": "images/liveview.jpg",
       "linkTo": "https://play.google.com/store/apps/details?id=com.sonyericsson.extras.liveview.plugins.peekscreen"
     },
@@ -297,20 +297,20 @@
     },
     {
       "company": "sakarya",
-      "title": "Quadrotor Initiative",
-      "subtext": "",
+      "title": "Agricultural Drone",
+      "subtext": "Automated pesticide spraying multirotor system",
       "image": "images/saucopter.jpg",
       "linkTo": "http://mclightning.com/quadrotor-long-story-short/3dsmax"
     },
     {
       "title": "nGun",
-      "subtext": "Symbian S60v3",
+      "subtext": "for Symbian S60v3",
       "image": "images/ngun.jpg",
       "linkTo": "http://mclightning.com/ngun"
     },
     {
       "title": "AlertMe",
-      "subtext": "Symbian S60v3",
+      "subtext": "for Symbian S60v3",
       "image": "images/alertme.jpg",
       "linkTo": "http://mclightning.com/alertme"
     },
@@ -346,7 +346,7 @@
     },
     {
       "title": "USB Infrared Receiver",
-      "subtext": "",
+      "subtext": "Translates IR signals to key presses",
       "image": "images/irreceive.jpg",
       "linkTo": "http://mclightning.com/diy-irreceiver-project/uncategorized"
     }
