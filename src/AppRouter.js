@@ -54,7 +54,7 @@ class AppRouter extends Component {
             <Container className="justify-content-center">
               <Row>
                 <Col md={12}>
-                  <Navbar.Brand href="/#/Home">
+                  <Navbar.Brand href="/#/">
                     <h1>Ahmet Yildirim</h1>
                   </Navbar.Brand>
                 </Col>
@@ -91,7 +91,7 @@ class AppRouter extends Component {
               component={withTracker(page.component, { data })}
             />
           ))}
-          <Route path={('/Home', '/')} exact component={withTracker(Main, { data })} />
+          <Route path="/" exact component={withTracker(Main, { data })} />
         </div>
       </Router>
     );
