@@ -84,7 +84,6 @@ class AppRouter extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <div className="fringe zig-zag-bottom" />
           </Navbar>
-          <Route path="/Home" exact component={withTracker(Main, { data })} />
           {Pages.map(page => (
             <Route
               path={`/${camelize(page.link)}`}
@@ -92,6 +91,7 @@ class AppRouter extends Component {
               component={withTracker(page.component, { data })}
             />
           ))}
+          <Route path={('/Home', '/')} exact component={withTracker(Main, { data })} />
         </div>
       </Router>
     );
