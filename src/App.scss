@@ -3,7 +3,8 @@ $color2: #d62828;
 $color3: #f77f00;
 $color4: #fcbf49;
 $color5: #eae2b7;
-$background: "http://localhost:3000/dust_scratches.png";
+$background: "/dust_scratches.png";
+$navbarBg: "/cloudy-day.png";
 
 html {
   height: 100%;
@@ -28,7 +29,7 @@ body {
   }
 }
 .navbar {
-  background-image: url("http://localhost:3000/cloudy-day.png");
+  background-image: url($navbarBg);
   background-repeat: repeat;
   background-attachment: fixed;
 }
