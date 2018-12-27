@@ -26,9 +26,9 @@ import Testimonials from './Pages/Testimonials';
 const Pages = [
   { component: Showcase, link: 'Showcase' },
   { component: CaseStudies, link: 'Case Studies' },
+  { component: Testimonials, link: 'Testimonials' },
   { component: Awards, link: 'Awards' },
   { component: Talks, link: 'Talks' },
-  { component: Testimonials, link: 'Testimonials' },
   { component: Resume, link: 'Resume' },
 ];
 
