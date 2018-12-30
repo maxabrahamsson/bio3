@@ -12,6 +12,7 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Container from 'react-bootstrap/lib/Container';
 import ReactGA from 'react-ga';
+import { SocialIcon } from 'react-social-icons';
 import withTracker from './withTracker';
 
 // Pages
@@ -67,6 +68,20 @@ class AppRouter extends Component {
                         </Nav.Link>
                       ))}
                     </Nav>
+                  </Navbar.Collapse>
+                </Col>
+                <Col md={12}>
+                  <Navbar.Collapse id="social-icons-navbar" className="justify-content-center">
+                    <SocialIcon target="_blank" url="http://github.com/ayildirim" />
+                    <SocialIcon target="_blank" url="http://twitter.com/mclightning" />
+                    <SocialIcon target="_blank" url="http://instagram.com/nerdinthenorth" />
+                    <SocialIcon target="_blank" url="http://www.linkedin.com/in/ahmetyildirim" />
+                    <SocialIcon
+                      target="_blank"
+                      url="https://www.youtube.com/channel/UCANG9U-sNypcfG1AxHObHqw
+                  "
+                    />
+                    <SocialIcon bgColor="#003049" target="_blank" url="mailto:mail@ahmet.se" />
                   </Navbar.Collapse>
                 </Col>
               </Row>
