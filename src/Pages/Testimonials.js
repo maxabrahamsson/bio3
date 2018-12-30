@@ -24,7 +24,6 @@ class Testimonials extends Component {
               <Card
                 style={{
                   width: '100%',
-                  height: '15vw',
                   objectFit: 'cover',
                   marginBottom: '15px',
                 }}
