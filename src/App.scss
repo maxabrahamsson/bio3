@@ -60,6 +60,18 @@ body {
   width: 100%;
   text-align: center;
 }
+.social-icon {
+  height: 35px !important;
+  width: 35px !important;
+  margin: 5px;
+}
+.social-svg-mask path {
+  fill: $color1;
+}
+#social-icons-navbar {
+  margin: 15px;
+  flex-direction: row !important;
+}
 .ProjectCard {
   border-color: $color1;
   margin-bottom: 25px;
@@ -111,6 +123,7 @@ body {
 }
 .container {
   padding: 50px;
+  padding-bottom: 0;
 }
 .alert {
   position: absolute;

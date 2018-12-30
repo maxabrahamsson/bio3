@@ -15,7 +15,6 @@ class Main extends Component<Props> {
       <Container>
         <Row>
           <Col md={6}>{this.renderList('Education', data.education)}</Col>
-          <Col md={6}>{this.renderList('Profiles', data.profiles)}</Col>
         </Row>
         <Row>
           <Col md={6}>{this.renderList('Publicity', data.publicity)}</Col>
