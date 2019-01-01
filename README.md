@@ -7,12 +7,11 @@
 - Google Analytics and GetClicky tracking
 
 ### Future Goals
-- Nicer design
 - Hover over different parts of the page to see code for each section
 - Decouple CSV,JSON data from the code
-- Make a backend that handles CSV,JSON import into some DB
-- Maybe, Firebase login as the admin for content changes?
-- Some quick way to eject boilerplate out of this project with minimal platform in place
+- Dockerize
+- Firebase Admin Login
+- MongoDB / GraphQL for the data
 
 ## Tech stack
 - React
