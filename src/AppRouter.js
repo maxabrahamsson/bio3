@@ -89,8 +89,8 @@ class AppRouter extends Component {
             <Alert key="info" variant="info">
               {'Under construction - '}
               <ReactGA.OutboundLink
-                eventLabel="https://github.com/ayildirim/bio2"
-                to="https://github.com/ayildirim/bio2"
+                eventLabel="https://github.com/ayildirim/bio3"
+                to="https://github.com/ayildirim/bio3"
                 target="_blank"
               >
                 See what's cooking
