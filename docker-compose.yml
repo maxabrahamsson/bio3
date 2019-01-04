@@ -1,0 +1,15 @@
+version: "3.0"
+
+services:
+  bio3:
+    container_name: bio3
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development

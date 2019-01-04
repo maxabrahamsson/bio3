@@ -1,0 +1,18 @@
+# base image
+FROM node:11.1.0
+
+# set working directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY package.json /usr/src/app/package.json
+
+RUN yarn install
+
+COPY . /usr/src/app
+
+ENV CI=true
+
+# start app
+CMD ["yarn", "test"]
+
