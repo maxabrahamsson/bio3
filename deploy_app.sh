@@ -12,6 +12,7 @@ if [[ $# -lt 1 ]] ; then
 fi
 
 echo "Deploying $CONTAINER_NAME to Docker Container"
+docker pull $DOCKER_IMAGE
 
 #Check for running container & stop it before starting a new one
 if [ $(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) = "true" ]; then
