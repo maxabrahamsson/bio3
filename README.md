@@ -5,16 +5,18 @@
 - Display data from LinkedIn profile data export ( Resume, Testimonial pages)
 - PDF export of the Resume
 - Google Analytics and GetClicky tracking
+- Continuous Integration, Testing and Deployment with CircleCI
+- Containerized deployment image with Docker
 
 ### Future Goals
-- Hover over different parts of the page to see code for each section
-- Decouple CSV,JSON data from the code
-- Dockerize
+- Decouple CSV,JSON data from the code, and move to MongoDB / GraphQL for the data
 - Firebase Admin Login
-- MongoDB / GraphQL for the data
+- Hover over different parts of the page to see code for each section
 
 ## Tech stack
 - React
+- Docker
+- Nginx
 
 ### Development environment
 - Visual Studio Code is the configured tool for the project
@@ -28,16 +30,15 @@
 - Husky precommit hooks for running tests locally prior to commits made locally
 
 ### Tests
-- CircleCI runs "yarn test" as configured in /.circleci/config.yml
+- CircleCI runs the test using Dockerfile.test container
 
 ### Deployment
 - The procedure is configured in /.circleci/config.yml, under deploy step
 - It only triggers when commits are merged into master branch
-- CircleCI builds the static page from the react app
-- Deploys the static page onto "gh-pages" repository
-- Push to "gh-pages" triggers the Github Webhook
-- Github Webhook informs RunCloud of the push
-- RunCloud pulls the new version of the site, and updates on DigitalOcean
+- It builds the release Docker image on CircleCI
+- Docker is image is then pushed to Docker Hub
+- Deploy_App.sh updates the running image on the DigitalOcean droplet
+- Nginx domain/http access configuration is updated everytime for simplicity and sake of safety.
 
 ### Recommended Tools
 - Use NVM to manage node versions
